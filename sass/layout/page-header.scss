@@ -1,16 +1,7 @@
 .page-header {
-  background-color: black;
-  background-image: url('../../img/bg-header.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  color: $white;
-
-  @media (min-width: $desktop-width) {
-    
-  }
+  background-color: white;
 }
-
+/*
 .page-header__wrapper {
   @include wrapper;
   padding-bottom: 2 * $padding;
@@ -66,4 +57,4 @@
     width: 400px;
     padding-left: 2 * $padding;
   }
-}
+}*/
