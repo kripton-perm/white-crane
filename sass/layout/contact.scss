@@ -1,0 +1,49 @@
+.contact {
+  background-color: black;
+  background-image: url('../../img/bg-mail.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: $white;
+}
+
+.contact__wrapper {
+  @include wrapper;
+  padding-top: 3 * $padding;
+  padding-bottom: 3 * $padding;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 5 * $padding;
+    padding-bottom: 5 * $padding;
+  }
+}
+
+.contact__title {
+  color: $white;
+  margin: 0;
+  margin-bottom: $padding;
+  padding: 0;
+  text-align: center;
+}
+
+.contact__subtitle {
+  color: $white;
+  padding-left: $padding;
+  padding-right: $padding;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 3 * $padding;
+  padding: 0;
+  text-align: center;
+
+  a {
+    color: #905b00;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: #fec503;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.page-header {
+  background-color: black;
+  background-image: url('../../img/bg-header.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: $white;
+
+  @media (min-width: $desktop-width) {
+    
+  }
+}
+
+.page-header__wrapper {
+  @include wrapper;
+  padding-bottom: 2 * $padding;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 4 * $padding;
+  }
+}
+
+.page-header__logo {
+  margin: 0;
+  padding: 0;
+
+  img {
+    width: 200px;
+
+    @media (min-width: $tablet-width) {
+      width: 300px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 500px;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    width: 200px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 300px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 500px;
+  }
+}
+
+.page-header__navigation {
+  padding-top: 50px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    width: 300px;
+    padding-left: $padding;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 400px;
+    padding-left: 2 * $padding;
+  }
+}

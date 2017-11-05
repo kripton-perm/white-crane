@@ -1,0 +1,228 @@
+.about {
+  background-color: $white;
+}
+
+.about__wrapper {
+  @include wrapper;
+  padding-top: 4 * $padding;
+  padding-bottom: 8 * $padding;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 6 * $padding;
+    padding-bottom: 10 * $padding;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 6 * $padding;
+    padding-bottom: 18 * $padding;
+  }
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: $padding;
+  padding: 0;
+  text-align: center;
+}
+
+.about__subtitle {
+  margin: 0;
+  margin-bottom: 2 * $padding;
+  padding: 0;
+  text-align: center;
+}
+
+.about__list {
+  @include list-reset;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    right: $padding / 2;
+    top: 30px;
+    bottom: -50px;
+    width: 2px;
+    background-color: gray;
+
+    @media (min-width: $tablet-width) {
+      right: 50%;
+      transform: translateX(50%);
+      bottom: -100px;
+    }
+
+    @media (min-width: $desktop-width) {
+      bottom: -200px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    right: -$padding;
+    bottom: -90px;
+    content: "Сайт готов!";
+    color: $white;
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 18px;
+    font-weight: 700;
+    padding-top: 5px;
+    text-align: center;
+    width: 3 * $padding;
+    height: 3 * $padding;
+    border-radius: 50%;
+    background-color: $yellow;
+    border: ($padding / 4) solid rgba(0, 255, 255, 0.3);
+
+    @media (min-width: $tablet-width) {
+      bottom: -140px;
+      right: 50%;
+      transform: translateX(50%);
+      width: 4 * $padding;
+      height: 4 * $padding;
+      font-size: 14px;
+      padding-top: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+      bottom: -280px;
+      width: 8 * $padding;
+      height: 8 * $padding;
+      font-size: 24px;
+      line-height: 30px;
+      padding-top: 40px;
+      border-width: $padding / 2;
+    }
+  }
+}
+
+.about__item {
+  position: relative;
+  margin-bottom: 2 * $padding;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    position: absolute;
+    right: -$padding;
+    top: -$padding / 2;
+    content: "";
+    width: 3 * $padding;
+    height: 3 * $padding;
+    border-radius: 50%;
+    background-image: url('http://via.placeholder.com/60x60');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    border: ($padding / 4) solid rgba(255, 255, 255, 0.3);
+
+    @media (min-width: $tablet-width) {
+      top: -$padding;
+      right: 50%;
+      transform: translateX(50%);
+      width: 4 * $padding;
+      height: 4 * $padding;
+      background-image: url('http://via.placeholder.com/80x80');
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 0;
+      width: 8 * $padding;
+      height: 8 * $padding;
+      background-image: url('http://via.placeholder.com/160x160');
+      border-width: $padding / 2;
+    }
+  }
+
+  &:nth-child(2n-1) {
+    @media (min-width: $tablet-width) {
+      text-align: right;
+      padding-right: 50%;
+    }
+
+    .about__caption {
+      @media (min-width: $tablet-width) {
+        padding-right: 3 * $padding;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding-right: 5 * $padding;
+      }
+    }
+
+    .about__text {
+      @media (min-width: $tablet-width) {
+        padding-right: $padding;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding-right: 5 * $padding;
+        padding-left: $padding;
+      }
+    }
+  }
+
+  &:nth-child(2n) {
+    @media (min-width: $tablet-width) {
+      text-align: left;
+      padding-left: 50%;
+    }
+
+    .about__caption {
+      @media (min-width: $tablet-width) {
+        padding-left: 3 * $padding;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding-left: 5 * $padding;
+      }
+    }
+
+    .about__text {
+      @media (min-width: $tablet-width) {
+        padding-left: $padding;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding-left: 5 * $padding;
+      }
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 3 * $padding;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 5 * $padding;
+  }
+}
+
+.about__caption {
+  margin: 0;
+  margin-bottom: $padding;
+  padding: 0;
+}
+
+.about__step {
+  display: block;
+  margin-bottom: $padding / 2;
+}
+
+.about__name {
+  display: block;
+}
+
+.about__text {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: grey;
+
+  @media (max-width: $mobile-width-only) {
+    padding-right: 2 * $padding;
+  }
+}
