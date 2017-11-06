@@ -13,6 +13,10 @@
     margin-right: -$padding;
     justify-content: space-between;
   }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+  }
 }
 
 .site-menu__item {
@@ -22,11 +26,23 @@
 
   @media (min-width: $tablet-width) {
     width: 20%;
+    position: relative;
   }
 
   @media (min-width: $desktop-width) {
     width: auto;
   }
+
+  &:hover {
+    .site-menu__secondary {
+      @media (min-width: $tablet-width) {
+        display: block;
+        position: absolute;
+        top: 1.5 * $padding;
+        left: -$padding / 2;
+      }
+  }
+}
 }
 
 .site-menu__link {
@@ -42,12 +58,10 @@
   &[href]:hover,
   &[href]:focus {
     color: darken($green, 15%);
+  }
 
-    + .site-menu__secondary {
-      @media (min-width: $tablet-width) {
-        display: block;
-      }
-    }
+  @media (min-width: $desktop-width) {
+    padding: $padding / 2;
   }
 }
 

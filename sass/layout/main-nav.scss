@@ -1,5 +1,4 @@
 .main-nav {
-  position: relative;
 
   &--open {
     .main-nav__toggle-image--open {
@@ -7,18 +6,22 @@
         display: none;
       }
     }
-/*
+
     .main-nav__list {
       @media (max-width: $mobile-width-only) {
         position: absolute;
-        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.95);
       }
-    }*/
+    }
   }
 
   &--close {
     .main-nav__toggle {
-      top: -$padding;
+      top: $padding;
     }
     .main-nav__toggle-image--close {
       display: none;
@@ -38,22 +41,22 @@
       }
     }
 
-    /*.main-nav__list {
+    .main-nav__list {
       @media (max-width: $mobile-width-only) {
         position: static;
         background-color: transparent;
       }
-    }*/
+    }
   }
 }
 
 .main-nav__toggle {
   position: absolute;
+  z-index: 1;
   top: 0;
   margin: 0;
   padding: 0;
-  right: -$padding;
-  display: inline-block;
+  right: 0;
   cursor: pointer;
   border: none;
   background-color: transparent;
