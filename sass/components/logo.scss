@@ -1,0 +1,28 @@
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo__crane {
+  @media (max-width: $mobile-width-only) {
+    flex-basis: 57px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 20%;
+    height: auto;
+  }
+}
+
+.logo__text {
+  @media (max-width: $mobile-width-only) {
+    flex-basis: 239px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 60%;
+    height: auto;
+  }
+}

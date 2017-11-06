@@ -1,53 +1,37 @@
 .page-header {
   background-color: white;
 }
-/*
+
 .page-header__wrapper {
   @include wrapper;
-  padding-bottom: 2 * $padding;
+  padding-top: 0;
 
-  @media (min-width: $tablet-width) {
+  /*@media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 4 * $padding;
-  }
+  }*/
 }
 
 .page-header__logo {
   margin: 0;
   padding: 0;
-
-  img {
-    width: 200px;
-
-    @media (min-width: $tablet-width) {
-      width: 300px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 500px;
-    }
-  }
-
-  @media (max-width: $mobile-width-only) {
-    position: absolute;
-    width: 200px;
-  }
-
+  
   @media (min-width: $tablet-width) {
-    width: 300px;
+    width: 60%;
+    margin: 0 auto;
   }
 
   @media (min-width: $desktop-width) {
-    width: 500px;
+    width: 50%;
   }
 }
 
 .page-header__navigation {
-  padding-top: 50px;
+  width: 100%;
 
-  @media (min-width: $tablet-width) {
+  /*@media (min-width: $tablet-width) {
     padding-top: 0;
     width: 300px;
     padding-left: $padding;
@@ -56,5 +40,5 @@
   @media (min-width: $desktop-width) {
     width: 400px;
     padding-left: 2 * $padding;
-  }
-}*/
+  }*/
+}

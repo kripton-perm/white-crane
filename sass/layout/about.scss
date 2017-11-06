@@ -1,13 +1,11 @@
 .about {
   background-color: white;
 }
-/*
+
 .about__wrapper {
   @include wrapper;
-  padding-top: 4 * $padding;
-  padding-bottom: 8 * $padding;
 
-  @media (min-width: $tablet-width) {
+  /*@media (min-width: $tablet-width) {
     padding-top: 6 * $padding;
     padding-bottom: 10 * $padding;
   }
@@ -15,9 +13,9 @@
   @media (min-width: $tablet-width) {
     padding-top: 6 * $padding;
     padding-bottom: 18 * $padding;
-  }
+  }*/
 }
-
+/*
 .about__title {
   margin: 0;
   margin-bottom: $padding;
