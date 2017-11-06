@@ -16,12 +16,16 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <h1 class="visually-hidden">Центр Восточной Культуры <strong>Белый Журавль</strong>, город Пермь</h1>
-      <nav class="page-header__navigation main-nav main-nav--nojs">
+      <nav class="page-header__navigation main-nav main-nav--open">
         <button class="main-nav__toggle">
           <span class="visually-hidden">Меню</span>
-          <svg class="main-nav__open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <svg class="main-nav__toggle-image main-nav__toggle-image--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0h24v24H0z" fill="transparent"/>
             <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="currentColor"/>
+          </svg>
+          <svg class="main-nav__toggle-image main-nav__toggle-image--close" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+            <path d="M0 0h24v24H0z" fill="transparent"/>
           </svg>
         </button>
         <h2 class="visually-hidden">Главное меню</h2>
@@ -37,6 +41,9 @@
           </li>
           <li class="site-menu__item">
             <a class="site-menu__link" href="prices.html">Цены</a>
+          </li>
+          <li class="site-menu__item">
+            <a class="site-menu__link" href="coaches.html">Тренеры</a>
           </li>
           <li class="site-menu__item">
             <a class="site-menu__link" href="types.html">Направления</a>
@@ -68,14 +75,14 @@
             </ul>
           </li>
           <li class="site-menu__item">
-            <a class="site-menu__link" href="coaches.html">Тренеры</a>
+            <a class="site-menu__link" href="shop.html">Магазин</a>
           </li>
           <li class="site-menu__item">
             <a class="site-menu__link" href="contacts.html">Контакты</a>
           </li>
-          <!-- <li class="site-menu__item">
+          <li class="site-menu__item">
             <a class="site-menu__link" href="reviews.html">Отзывы</a>
-          </li> -->
+          </li>
           <li class="site-menu__item">
             <a class="site-menu__link" href="blog.html">Блог</a>
           </li>
@@ -778,5 +785,6 @@
       </section>
     </div>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>

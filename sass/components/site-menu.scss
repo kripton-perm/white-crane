@@ -9,6 +9,8 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -$padding;
+    margin-right: -$padding;
     justify-content: space-between;
   }
 }
@@ -19,7 +21,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 25%;
+    width: 20%;
   }
 
   @media (min-width: $desktop-width) {
@@ -47,7 +49,6 @@
       }
     }
   }
-  
 }
 
 .site-menu__secondary {
