@@ -1,0 +1,35 @@
+.intro {
+  padding-top: 2 * $padding;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 4 * $padding;
+  }
+}
+
+.intro__title {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 45px;
+  line-height: 55px;
+  margin-bottom: $padding;
+
+  @media (min-width: $tablet-width) {
+    font-size: 55px;
+    line-height: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 72px;
+    line-height: 90px;
+  }
+}
+
+.intro__description {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: $padding;
+}
