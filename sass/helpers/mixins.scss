@@ -5,19 +5,16 @@
 }
 
 @mixin wrapper {
-  width: $mobile-width;
-  padding-left: $padding;
-  padding-right: $padding;
-  padding-top: $padding;
-  padding-bottom: $padding;
-  margin: 0 auto;
-
-  @media (min-width: $tablet-width) {
-    width: $tablet-width;
-  }
+  width: 100%;
+  min-width: $mobile-width;
+  padding-left: $padding / $mobile-width * 100%;
+  padding-right: $padding / $mobile-width * 100%;
+  padding-top: 2 * $padding;
+  padding-bottom: 2 * $padding;
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 

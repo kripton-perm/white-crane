@@ -1,3 +1,8 @@
 .schedule {
   background-color: #6f9;
 }
+
+.schedule__wrapper {
+  @include wrapper;
+  /*outline: 1px solid red;*/
+}

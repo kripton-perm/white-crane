@@ -4,9 +4,10 @@
 @import "helpers/variables.scss";
 
 @import "base/base.scss";
-/*@import "base/visually-hidden.scss";*/
+@import "base/visually-hidden.scss";
 
 @import "layout/page-header.scss";
+@import "layout/main-nav.scss";
 @import "layout/page-main.scss";
 @import "layout/greeting.scss";
 @import "layout/about.scss";
@@ -14,11 +15,14 @@
 @import "layout/news.scss";
 @import "layout/types.scss";
 @import "layout/coaches.scss";
-@import "layout/reviews.scss";
+/*@import "layout/reviews.scss";*/
 @import "layout/page-footer.scss";
 @import "layout/modal.scss";
 
 @import "components/button.scss";
+@import "components/logo.scss";
+@import "components/site-menu.scss";
+@import "components/secondary.scss";
 @import "components/form.scss";
 @import "components/slider.scss";
 
