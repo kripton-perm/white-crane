@@ -7,22 +7,30 @@
 
 .logo__crane {
   @media (max-width: $mobile-width-only) {
-    flex-basis: 57px;
+    width: auto;
+    height: auto;
   }
 
   @media (min-width: $tablet-width) {
-    width: 25%;
-    height: auto;
+    width: 86px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 109px;
   }
 }
 
 .logo__text {
   @media (max-width: $mobile-width-only) {
-    flex-basis: 239px;
+    width: auto;
+    height: auto;
   }
 
   @media (min-width: $tablet-width) {
-    width: 65%;
-    height: auto;
+    width: 299px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 407px;
   }
 }

@@ -89,8 +89,16 @@
         </ul>
       </nav>
       <p class="page-header__logo logo">
-        <img class="logo__crane" src="img/white-crane-logo-1.png" alt="Логотип центра восточной культуры Белый Журавль" width="57" height="130">
-        <img class="logo__text" src="img/white-crane-logo-2.png" alt="Логотип центра восточной культуры Белый Журавль" width="239" height="110">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/white-crane-logo-1-desktop.png">
+          <source media="(min-width: 660px)" srcset="img/white-crane-logo-1-tablet.png">
+          <img class="logo__crane" src="img/white-crane-logo-1-mobile.png" alt="Логотип центра восточной культуры Белый Журавль" width="57" height="130">
+        </picture>
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/white-crane-logo-2-desktop.png">
+          <source media="(min-width: 660px)" srcset="img/white-crane-logo-2-tablet.png">
+          <img class="logo__text" src="img/white-crane-logo-2-mobile.png" alt="Логотип центра восточной культуры Белый Журавль" width="239" height="110">
+        </picture>
       </p>
     </div>
   </header>
