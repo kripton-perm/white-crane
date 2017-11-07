@@ -22,4 +22,8 @@
   &[href]:focus {
     color: darken($green, 35%);
   }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+  }
 }
