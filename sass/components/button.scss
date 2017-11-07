@@ -1,14 +1,13 @@
-/*
 .button {
   font: inherit;
   cursor: pointer;
   background-color: transparent;
-  border: 5px solid $yellow;
+  border: 5px solid $green;
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: $padding;
   display: inline-block;
   padding: 10px 30px;
-  color: $white;
+  color: $green;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -16,7 +15,17 @@
 
   &:hover,
   &:focus {
-    background-color: $yellow;
-    color: black;
+    background-color: $green;
+    color: white;
   }
-}*/
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
