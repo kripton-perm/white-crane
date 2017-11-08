@@ -1,0 +1,39 @@
+.contacts {
+  padding: $padding;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacts__title {
+  margin: 0;
+  margin-bottom: 2 * $padding;
+  padding: 0;
+}
+
+.contacts__address {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: $padding;
+}
+
+.contacts__email {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: $padding;
+}
+
+.contacts__phone {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2 * $padding;
+}
