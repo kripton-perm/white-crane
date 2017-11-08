@@ -8,6 +8,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .schedule__title {
@@ -17,17 +23,19 @@
 }
 
 .schedule__day {
-  summary {
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-      color: red;
-    }
-  }
   h3 {
     font-size: 14px;
     text-align: center;
+
+    @media (min-width: $tablet-width) {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -35,6 +43,10 @@
   width: 100%;
   border-collapse: collapse;
   margin-bottom: $padding;
+
+  @media (min-width: $tablet-width) {
+    width: 48%;
+  }
 }
 
 .schedule__item {
@@ -78,6 +90,12 @@
   color: black;
   border-color: black;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    font-size: 22px;
+    line-height: 30px;
+  }
+
   &:hover,
   &:focus {
     background-color: black;
@@ -91,6 +109,11 @@
 .schedule__signup {
   color: black;
   border-color: black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &:hover,
   &:focus {

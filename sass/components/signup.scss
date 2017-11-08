@@ -1,6 +1,11 @@
 .signup {
   background-color: yellow;
   overflow-y: scroll;
+
+  @media (min-width: $desktop-width) {
+    overflow-y: auto;
+    height: 100vh;
+  }
 }
 
 .signup__wrapper {
@@ -28,6 +33,11 @@
 }
 
 .signup__intro {
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+  }
+  
   a {
     color: $green;
     text-decoration: none;
