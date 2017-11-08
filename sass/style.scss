@@ -6,6 +6,8 @@
 @import "base/base.scss";
 @import "base/visually-hidden.scss";
 
+@import "components/button.scss";
+
 @import "layout/page-header.scss";
 @import "layout/main-nav.scss";
 @import "layout/page-main.scss";
@@ -19,11 +21,11 @@
 @import "layout/page-footer.scss";
 @import "layout/modal.scss";
 
-@import "components/button.scss";
 @import "components/logo.scss";
 @import "components/site-menu.scss";
 @import "components/secondary.scss";
 @import "components/form.scss";
+@import "components/signup.scss";
 @import "components/slider.scss";
 
 

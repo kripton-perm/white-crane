@@ -1,8 +1,103 @@
 .schedule {
-  background-color: #6f9;
+  background-color: lighten($green, 25%);
 }
 
 .schedule__wrapper {
   @include wrapper;
   /*outline: 1px solid red;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.schedule__title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.schedule__day {
+  summary {
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: red;
+    }
+  }
+  h3 {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+.schedule__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: $padding;
+}
+
+.schedule__item {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid darken($green, 35%);
+
+  &:nth-child(2n) {
+    background-color: rgba(0, 0, 0, 0.10);
+    border-top: none;
+    border-bottom: none;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid darken($green, 35%);
+  }
+
+  td {
+    padding: $padding / 4;
+  }
+
+  td:nth-child(1) {
+    &::before {
+      content: "С ";
+    }
+  }
+
+  td:nth-child(2) {
+    &::before {
+      content: "до ";
+    }
+  }
+
+  td:nth-child(3) {
+    width: 100%;
+  }
+}
+
+.schedule__link {
+  margin-bottom: $padding;
+  color: black;
+  border-color: black;
+
+  &:hover,
+  &:focus {
+    background-color: black;
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.schedule__signup {
+  color: black;
+  border-color: black;
+
+  &:hover,
+  &:focus {
+    background-color: black;
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }

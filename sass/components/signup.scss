@@ -1,0 +1,36 @@
+.signup {
+  background-color: yellow;
+  overflow-y: scroll;
+}
+
+.signup__wrapper {
+  @include wrapper;
+}
+
+.signup__close {
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  top: $padding / 2;
+  right: $padding;
+  color: $green;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: darken($green, 30%);
+  }
+}
+
+.signup__close-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.signup__intro {
+  a {
+    color: $green;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
