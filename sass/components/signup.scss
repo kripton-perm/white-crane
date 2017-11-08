@@ -1,0 +1,46 @@
+.signup {
+  background-color: yellow;
+  overflow-y: scroll;
+
+  @media (min-width: $desktop-width) {
+    overflow-y: auto;
+    height: 100vh;
+  }
+}
+
+.signup__wrapper {
+  @include wrapper;
+}
+
+.signup__close {
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  top: $padding / 2;
+  right: $padding;
+  color: $green;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: darken($green, 30%);
+  }
+}
+
+.signup__close-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.signup__intro {
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+  }
+  
+  a {
+    color: $green;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
