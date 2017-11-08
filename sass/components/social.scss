@@ -1,0 +1,25 @@
+.social {
+  
+}
+
+.social__text {
+  margin: 0;
+  padding: 0;
+}
+
+.social__list {
+  @include list-reset;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social__link {
+  display: block;
+  color: white;
+
+  &:hover,
+  &:focus {
+    color: darken(white, 10%);
+  }
+}
