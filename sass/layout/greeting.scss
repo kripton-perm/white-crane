@@ -20,6 +20,7 @@
   /*outline: 1px solid red;*/
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-end;
 
   @media (min-width: $tablet-width) {
@@ -34,7 +35,7 @@
 }
 
 .greeting__title {
-  width: $mobile-width;
+  width: $mobile-width - 2 * $padding;
   margin: 0;
   margin-bottom: $padding;
   padding: 0;
@@ -63,7 +64,7 @@
 }
 
 .greeting__text {
-  width: $mobile-width;
+  width: $mobile-width - 2 * $padding;
   font-size: 14px;
   line-height: 20px;
   text-align: justify;
@@ -90,7 +91,7 @@
 }
 
 .greeting__list-intro {
-  width: $mobile-width;
+  width: $mobile-width - 2 * $padding;
   font-size: 14px;
   line-height: 20px;
   color: white;
@@ -113,7 +114,7 @@
 
 .greeting__list {
   @include list-reset;
-  width: $mobile-width;
+  width: $mobile-width - 2 * $padding;
   margin-bottom: $padding;
 
   @media (min-width: $tablet-width) {
