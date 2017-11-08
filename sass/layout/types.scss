@@ -5,4 +5,88 @@
 .types__wrapper {
   @include wrapper;
   /*outline: 1px solid red;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.types__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: $padding;
+}
+
+.types__list {
+  @include list-reset;
+  width: 100%;
+  margin-bottom: $padding;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+}
+
+.types__item {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    width: 48%;
+    margin-bottom: $padding;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 30%;
+  }
+
+  &:nth-child(n+2) {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
+}
+
+.types__link {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+  color: white;
+  justify-content: center;
+
+  &:hover,
+  &:focus {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.types__name {
+  position: relative;
+  z-index: 5;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: -3 * $padding;
+}
+
+.types__description {
+  margin: 0;
+  padding: 0 $padding;
+  text-align: center;
+}
+
+.types__image {
+  margin: 0;
+  padding: 0;
+  order: -1;
+  margin-bottom: $padding / 2;
+
+  img {
+    transition: all 1s;
+  }
 }
