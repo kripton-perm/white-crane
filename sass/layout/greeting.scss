@@ -69,7 +69,6 @@
   line-height: 20px;
   text-align: justify;
   color: white;
-  text-indent: $padding;
   margin: 0;
   margin-bottom: $padding;
   padding: 0;
@@ -85,7 +84,6 @@
     color: darken($green, 10%);
     font-size: 25px;
     line-height: 30px;
-    text-indent: 2 * $padding;
     margin-bottom: 2 * $padding;
   }
 }
@@ -95,7 +93,6 @@
   font-size: 14px;
   line-height: 20px;
   color: white;
-  text-indent: $padding;
   margin: 0;
   padding: 0;
 
