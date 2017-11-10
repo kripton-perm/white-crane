@@ -3,8 +3,8 @@
   padding: $padding;
   margin: 0 auto;
 
-  @media (max-width: $mobile-width-only) {
-    width: $mobile-width - 2 * $padding;
+  @media (min-width: $desktop-width) {
+    margin: 0;
   }
 }
 
@@ -19,7 +19,6 @@
   margin: 0;
   margin-bottom: $padding;
   padding: 0;
-  text-indent: $padding;
 }
 
 .recall__form {
