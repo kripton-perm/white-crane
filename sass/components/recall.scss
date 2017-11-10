@@ -3,8 +3,8 @@
   padding: $padding;
   margin: 0 auto;
 
-  @media (max-width: $mobile-width-only) {
-    width: $mobile-width - 2 * $padding;
+  @media (min-width: $desktop-width) {
+    margin: 0;
   }
 }
 
