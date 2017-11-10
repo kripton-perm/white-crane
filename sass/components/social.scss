@@ -16,10 +16,10 @@
 
 .social__link {
   display: block;
-  color: white;
+  color: $green;
 
   &:hover,
   &:focus {
-    color: darken(white, 10%);
+    color: darken($green, 10%);
   }
 }

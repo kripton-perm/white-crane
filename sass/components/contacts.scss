@@ -27,6 +27,8 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: $padding;
+  color: $green;
+  font-weight: 700;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
@@ -44,6 +46,18 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
   }
+
+  a {
+    color: $green;
+    font-weight: 700;
+    transition: all, 0.5s;
+
+    &:hover,
+    &:focus {
+      color: darken($green, 10%);
+      text-decoration: none;
+    }
+  }
 }
 
 .contacts__phone {
@@ -57,10 +71,23 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
   }
+
+  a {
+    color: $green;
+    font-weight: 700;
+    transition: all, 0.5s;
+
+    &:hover,
+    &:focus {
+      color: darken($green, 10%);
+      text-decoration: none;
+    }
+  }
 }
 
 .contacts__icon {
   margin-bottom: $padding / 2;
+  color: $green;
 
   @media (min-width: $desktop-width) {
     margin-bottom: $padding;

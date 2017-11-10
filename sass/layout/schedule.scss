@@ -20,18 +20,20 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  margin-bottom: $padding;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 2 * $padding;
+  }
+
+  time {
+    white-space: nowrap;
+  }
 }
 
 .schedule__day {
-  h3 {
-    font-size: 14px;
-    text-align: center;
-
-    @media (min-width: $tablet-width) {
-      width: 100%;
-    }
-  }
-
+  width: 100%;
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -48,12 +50,28 @@
   @media (min-width: $tablet-width) {
     width: 48%;
   }
+
+  caption {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: $padding / 2;
+  }
 }
 
 .schedule__item {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   border: 1px solid darken($green, 35%);
+  font-size: 16px;
+  line-height: 20px;
+  padding: $padding / 2;
+  color: black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 
   &:nth-child(2n) {
     background-color: white;
@@ -64,7 +82,7 @@
   &:last-child {
     border-bottom: 1px solid darken($green, 35%);
   }
-
+  
   td {
     padding: $padding / 4;
   }
@@ -81,8 +99,25 @@
     }
   }
 
+  td:nth-child(1) {
+    width: 50%;
+    text-align: right;
+  }
+
+  td:nth-child(2) {
+    width: 50%;
+    text-align: left;
+  }
+
   td:nth-child(3) {
-    width: 100%;
+    text-align: left;
+    margin-right: $padding;
+    font-weight: 700;
+  }
+
+  td:nth-child(4) {
+    text-align: right;
+    margin-left: auto;
   }
 }
 
