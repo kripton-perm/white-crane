@@ -48,7 +48,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  color: darken($green, 25%);
+  color: $green;
   margin-bottom: 2 * $padding;
 
   @media (min-width: $tablet-width) {
@@ -66,10 +66,6 @@
 
   &:last-child {
     margin-bottom: 0;
-  }
-
-  &:nth-child(2n) {
-    color: darken($green, 5%);
   }
 
   h3 {

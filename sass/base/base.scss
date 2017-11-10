@@ -46,20 +46,26 @@ img {
   max-width: 100%;
   height: auto;
 }
-/*
+
 .title {
   text-transform: uppercase;
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 30px;
   font-weight: 700;
-  color: #333333;
+  color: $green;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 40px;
     line-height: 50px;
   }
 }
-
+/*
 .subtitle {
   font-weight: 300;
   font-size: 14px;

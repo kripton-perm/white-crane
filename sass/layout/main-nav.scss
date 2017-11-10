@@ -54,7 +54,8 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 255, 0, 0.75);
+    /*background-color: rgba(0, 255, 0, 0.75);*/
+    background-color: $green;
     padding-left: $padding;
     padding-right: $padding;
   }

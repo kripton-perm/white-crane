@@ -30,8 +30,8 @@
         </button>
         <h2 class="visually-hidden">Главное меню</h2>
         <ul class="main-nav__list site-menu">
-          <li class="site-menu__item site-menu__item--current">
-            <a class="site-menu__link">Главная</a>
+          <li class="site-menu__item site-menu__item">
+            <a class="site-menu__link site-menu__link--current">Главная</a>
           </li>
           <li class="site-menu__item">
             <a class="site-menu__link" href="news.html">Новости</a>
@@ -89,23 +89,25 @@
         </ul>
       </nav>
       <p class="page-header__logo logo">
-        <picture>
-          <source media="(min-width: 960px)" srcset="img/white-crane-logo-1-desktop@2.png 2x, img/white-crane-logo-1-desktop.png 1x">
-          <source media="(min-width: 660px)" srcset="img/white-crane-logo-1-tablet@2.png 2x, img/white-crane-logo-1-tablet.png 1x">
-          <img class="logo__crane" src="img/white-crane-logo-1-mobile.png" alt="Логотип центра восточной культуры Белый Журавль" width="57" height="130" srcset="img/white-crane-logo-1-mobile@2.png 2x">
-        </picture>
-        <picture>
-          <source media="(min-width: 960px)" srcset="img/white-crane-logo-2-desktop@2.png 1x, img/white-crane-logo-2-desktop.png 1x">
-          <source media="(min-width: 660px)" srcset="img/white-crane-logo-2-tablet@2.png 2x, img/white-crane-logo-2-tablet.png 1x">
-          <img class="logo__text" src="img/white-crane-logo-2-mobile.png" alt="Логотип центра восточной культуры Белый Журавль" width="239" height="110" srcset="img/white-crane-logo-2-mobile@2.png 2x">
-        </picture>
+        <a>
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/white-crane-logo-1-desktop@2.png 2x, img/white-crane-logo-1-desktop.png 1x">
+            <source media="(min-width: 660px)" srcset="img/white-crane-logo-1-tablet@2.png 2x, img/white-crane-logo-1-tablet.png 1x">
+            <img class="logo__crane" src="img/white-crane-logo-1-mobile.png" alt="Логотип центра восточной культуры Белый Журавль" width="57" height="130" srcset="img/white-crane-logo-1-mobile@2.png 2x">
+          </picture>
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/white-crane-logo-2-desktop@2.png 1x, img/white-crane-logo-2-desktop.png 1x">
+            <source media="(min-width: 660px)" srcset="img/white-crane-logo-2-tablet@2.png 2x, img/white-crane-logo-2-tablet.png 1x">
+            <img class="logo__text" src="img/white-crane-logo-2-mobile.png" alt="Логотип центра восточной культуры Белый Журавль" width="239" height="110" srcset="img/white-crane-logo-2-mobile@2.png 2x">
+          </picture>
+        </a>
       </p>
     </div>
   </header>
   <main class="page-main">
     <section class="greeting">
       <div class="greeting__wrapper">
-        <h2 class="title greeting__title">Мы рады приветствовать вас <span>на нашем сайте!</span> </h2>
+        <h2 class="greeting__title">Мы рады приветствовать вас <span>на нашем сайте!</span> </h2>
         <p class="greeting__text">Центр Восточной Культуры «Белый журавль» - это уютное пространство в самом центре Перми, которое объединяет в одном месте многочисленные оздоровительные и духовные практики Индии, Китая, Японии и других стран Востока и Запада.</p>
         <p class="greeting__list-intro">В «Белом журавле» каждый сможет:</p>
         <ul class="greeting__list">
@@ -165,9 +167,8 @@
     </section>
     <section class="schedule">
       <div class="schedule__wrapper">
-        <h2 class="title schedule__title">Наше расписание</h2>
+        <h2 class="title schedule__title">Расписание на <time datetime="2017-11-05">5 ноября 2017</time> </h2>
         <section class="schedule__day">
-          <h3>Сегодня, <time datetime="2017-11-05">5 ноября 2017</time>, воскресенье</h3>
           <table class="schedule__table">
             <caption>Зал 1</caption>
             <thead class="visually-hidden">
@@ -180,52 +181,52 @@
             </thead>
             <tbody>
               <tr class="schedule__item">
-                <td>7:30</td>
-                <td>8:30</td>
-                <td>Цигун для начинающих</td>
-                <td>Варов Сергей</td>
+                <td>7:00</td>
+                <td>8:00</td>
+                <td>Beauty-йога</td>
+                <td>Винник Оксана</td>
               </tr>
               <tr class="schedule__item">
-                <td>7:30</td>
                 <td>8:30</td>
-                <td>Цигун для начинающих</td>
-                <td>Варов Сергей</td>
+                <td>10:00</td>
+                <td>Ушу для школьников</td>
+                <td>Волгарева Динара</td>
               </tr>
               <tr class="schedule__item">
-                <td>7:30</td>
-                <td>8:30</td>
-                <td>Цигун для начинающих</td>
-                <td>Варов Сергей</td>
+                <td>10:00</td>
+                <td>11:30</td>
+                <td>Хатха-йога</td>
+                <td>Туктамышева Екатерина</td>
               </tr>
               <tr class="schedule__item">
-                <td>7:30</td>
-                <td>8:30</td>
-                <td>Цигун для начинающих</td>
-                <td>Варов Сергей</td>
+                <td>11:30</td>
+                <td>12:30</td>
+                <td>Женская йога, йога для беременных</td>
+                <td>Туктамышева Екатерина</td>
+              </tr>
+              <tr class="schedule__item">
+                <td>16:00</td>
+                <td>17:00</td>
+                <td>Йога для тазобедренных суставов</td>
+                <td>Ярославская Эрика</td>
               </tr>
               <tr class="schedule__item">
                 <td>18:00</td>
-                <td>19:30</td>
-                <td>Тайцзицуань</td>
-                <td>Чудинов Максим</td>
+                <td>19:00</td>
+                <td>Силовая йога</td>
+                <td>Дунаева Ирина</td>
               </tr>
               <tr class="schedule__item">
-                <td>18:00</td>
-                <td>19:30</td>
-                <td>Тайцзицуань</td>
-                <td>Чудинов Максим</td>
+                <td>19:00</td>
+                <td>20:30</td>
+                <td>Кундалини-йога</td>
+                <td>Чупина Клавдия</td>
               </tr>
               <tr class="schedule__item">
-                <td>18:00</td>
-                <td>19:30</td>
-                <td>Тайцзицуань</td>
-                <td>Чудинов Максим</td>
-              </tr>
-              <tr class="schedule__item">
-                <td>18:00</td>
-                <td>19:30</td>
-                <td>Тайцзицуань</td>
-                <td>Чудинов Максим</td>
+                <td>20:30</td>
+                <td>22:00</td>
+                <td>Вин-чун</td>
+                <td>Щепин Егор</td>
               </tr>
             </tbody>
           </table>
@@ -247,20 +248,32 @@
                 <td>Варов Сергей</td>
               </tr>
               <tr class="schedule__item">
-                <td>7:30</td>
                 <td>8:30</td>
-                <td>Цигун для начинающих</td>
+                <td>10:00</td>
+                <td>Бодифлекс</td>
+                <td>Колыванова Светлана</td>
+              </tr>
+              <tr class="schedule__item">
+                <td>11:00</td>
+                <td>12:00</td>
+                <td>Динамический цигун</td>
                 <td>Варов Сергей</td>
               </tr>
               <tr class="schedule__item">
-                <td>7:30</td>
-                <td>8:30</td>
-                <td>Цигун для начинающих</td>
-                <td>Варов Сергей</td>
+                <td>13:00</td>
+                <td>14:00</td>
+                <td>Хатха-йога "Здоровая спина"</td>
+                <td>Ярославская Эрика</td>
               </tr>
               <tr class="schedule__item">
-                <td>7:30</td>
-                <td>8:30</td>
+                <td>14:30</td>
+                <td>15:30</td>
+                <td>Цигун. Дыхательные техники</td>
+                <td>Политова Ольга</td>
+              </tr>
+              <tr class="schedule__item">
+                <td>16:00</td>
+                <td>17:00</td>
                 <td>Цигун для начинающих</td>
                 <td>Варов Сергей</td>
               </tr>
@@ -269,6 +282,12 @@
                 <td>19:30</td>
                 <td>Тайцзицуань</td>
                 <td>Чудинов Максим</td>
+              </tr>
+              <tr class="schedule__item">
+                <td>21:00</td>
+                <td>22:00</td>
+                <td>Цигун для начинающих</td>
+                <td>Варов Сергей</td>
               </tr>
             </tbody>
           </table>

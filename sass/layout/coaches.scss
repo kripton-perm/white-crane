@@ -6,6 +6,16 @@
   align-items: center;
 }
 
+.coaches__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: $padding;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 2 * $padding;
+  }
+}
+
 .coaches__list {
   @include list-reset;
   width: 100%;

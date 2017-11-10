@@ -10,6 +10,10 @@
   padding: 0;
   text-align: center;
   margin-bottom: $padding;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 2 * $padding;
+  }
 }
 
 .news__list {
@@ -33,6 +37,7 @@
   @media (min-width: $tablet-width) {
     width: 45%;
     margin-bottom: 0;
+    align-items: flex-start;
   }
 
   @media (min-width: $desktop-width) {
@@ -76,7 +81,31 @@
   margin: 0;
   padding: 0;
   width: 100%;
+  height: auto;
   text-align: center;
+  margin-bottom: $padding / 2;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.news__link {
+  color: $green;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  padding: $padding / 2;
+  border: 2px solid $green;
+  transition: all 0.5s;
+  margin-top: auto;
+
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: $green;
+  }
 }
 
 

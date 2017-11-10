@@ -74,18 +74,18 @@
 }
 
 .form__input {
-  padding: $padding / 2;
+  padding: 0 $padding / 2;
   width: 100%;
   font: inherit;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 50px;
   color: $green;
   height: 50px;
 
   &::placeholder {
     font: inherit;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 50px;
     color: $green;
   }
 }
