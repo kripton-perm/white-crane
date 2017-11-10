@@ -1,5 +1,5 @@
 .schedule {
-  background-color: lighten($green, 25%);
+  background-color: rgba($green, 0.3);
 }
 
 .schedule__wrapper {
@@ -43,6 +43,7 @@
   width: 100%;
   border-collapse: collapse;
   margin-bottom: $padding;
+  background-color: $green;
 
   @media (min-width: $tablet-width) {
     width: 48%;
@@ -55,7 +56,7 @@
   border: 1px solid darken($green, 35%);
 
   &:nth-child(2n) {
-    background-color: rgba(0, 0, 0, 0.10);
+    background-color: white;
     border-top: none;
     border-bottom: none;
   }
