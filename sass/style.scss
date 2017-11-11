@@ -7,20 +7,6 @@
 @import "base/visually-hidden.scss";
 
 @import "components/button.scss";
-
-@import "layout/page-header.scss";
-@import "layout/main-nav.scss";
-@import "layout/page-main.scss";
-@import "layout/greeting.scss";
-@import "layout/about.scss";
-@import "layout/schedule.scss";
-@import "layout/news.scss";
-@import "layout/types.scss";
-@import "layout/coaches.scss";
-/*@import "layout/reviews.scss";*/
-@import "layout/page-footer.scss";
-@import "layout/modal.scss";
-
 @import "components/logo.scss";
 @import "components/site-menu.scss";
 @import "components/secondary.scss";
@@ -31,6 +17,22 @@
 @import "components/map.scss";
 @import "components/signup.scss";
 @import "components/slider.scss";
+@import "components/breadcrumbs.scss";
+@import "components/pagination.scss";
+
+@import "layout/page-header.scss";
+@import "layout/main-nav.scss";
+@import "layout/page-main.scss";
+@import "layout/greeting.scss";
+@import "layout/about.scss";
+@import "layout/schedule.scss";
+@import "layout/news.scss";
+@import "layout/gallery.scss";
+@import "layout/types.scss";
+@import "layout/coaches.scss";
+/*@import "layout/reviews.scss";*/
+@import "layout/page-footer.scss";
+@import "layout/modal.scss";
 
 
 

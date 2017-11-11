@@ -1,8 +1,5 @@
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
-var scheduleSignup = document.querySelector('.schedule__signup');
-var scheduleModal = document.querySelector('.schedule__modal');
-var scheduleClose = scheduleModal.querySelector('.signup__close');
 //var servicesToggles = document.querySelectorAll('.services .slider__toggle');
 //var servicesItems = document.querySelectorAll('.services .services__item');
 //var servicesList = document.querySelector('.services__list');
@@ -25,6 +22,11 @@ navToggle.addEventListener('click', function() {
     //pageHeader.classList.add('page-header--closed');
   }
 });
+
+var scheduleSignup = document.querySelector('.schedule__signup');
+var scheduleModal = document.querySelector('.schedule__modal');
+var scheduleClose = scheduleModal.querySelector('.signup__close');
+
 scheduleSignup.addEventListener('click', function() {
   scheduleModal.classList.add('modal--show');
 });
