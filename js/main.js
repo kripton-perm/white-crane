@@ -23,16 +23,6 @@ navToggle.addEventListener('click', function() {
   }
 });
 
-var scheduleSignup = document.querySelector('.schedule__signup');
-var scheduleModal = document.querySelector('.schedule__modal');
-var scheduleClose = scheduleModal.querySelector('.signup__close');
-
-scheduleSignup.addEventListener('click', function() {
-  scheduleModal.classList.add('modal--show');
-});
-scheduleClose.addEventListener('click', function() {
-  scheduleModal.classList.remove('modal--show');
-});
 /*
 servicesList.classList.remove('services__list--nojs');
 servicesList.classList.add('slider');
