@@ -1,0 +1,61 @@
+.pagination {
+  
+}
+
+.pagination__list {
+  @include list-reset;
+  display: flex;
+}
+
+.pagination__link {
+  display: block;
+  width: 2 * $padding;
+  height: 2 * $padding;
+  border: 1px solid $green;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: $green;
+  transition: all 0.5s;
+
+  &--current {
+    background-color: $green;
+    color: white;
+  }
+
+  &--next {
+    position: relative;
+    border-right-width: 2px;
+
+    &::before {
+      position: absolute;
+      content: ">";
+      font-weight: 700;
+    }
+  }
+
+  &--prev {
+    position: relative;
+    border-left-width: 2px;
+
+    &::before {
+      position: absolute;
+      content: "<";
+      font-weight: 700;
+    }
+  }
+
+  &--disabled {
+    pointer-events: none;
+    color: rgba($green, 0.5);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $green;
+    color: white;
+  }
+}

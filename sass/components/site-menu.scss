@@ -75,6 +75,8 @@
   }
 
   &--current {
+    color: black;
+
     @media (min-width: $tablet-width) {
       color: white;
     }

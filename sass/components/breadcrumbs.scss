@@ -1,0 +1,48 @@
+.breadcrumbs {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs__item {
+  padding-right: 2 * $padding;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 2.5 * $padding;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 3 * $padding;
+  }
+
+  &::after {
+    position: absolute;
+    content: ">>";
+    color: $green;
+    right: 8px;
+    top: 0;
+
+    @media (min-width: $tablet-width) {
+      right: 9px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 12px;
+    }
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  a[href] {
+    text-decoration: none;
+    color: $green;
+
+    &:hover,
+    &:focus {
+      color: darken($green, 15%);
+    }
+  }
+}
