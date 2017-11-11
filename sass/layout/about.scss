@@ -40,6 +40,8 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: stretch;
   }
 }
@@ -56,7 +58,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 20%;
+    width: 30%;
     padding-left: $padding;
     padding-right: $padding;
     margin-bottom: 0;
@@ -110,6 +112,10 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 0;
+  }
+
+  span {
+    white-space: nowrap;
   }
 }
 
