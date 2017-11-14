@@ -5,16 +5,14 @@
 }
 
 .page-header__wrapper {
-  @include wrapper-desktop-fixed;
-  padding-top: 2.5 * $padding;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 6 * $padding;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 6 * $padding;
-  }
+  @include wrapper;
+  @include padding(3, 2);
+  @include tablet-block{
+    @include padding(6, 2);
+  };
+  @include desktop-block{
+    @include padding(4, 1);
+  };
 }
 
 .page-header__logo {

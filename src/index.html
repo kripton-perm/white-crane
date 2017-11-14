@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="debug">
+  <!-- <div class="debug">
             <div>
                 <div>
                     <div></div>
@@ -38,7 +38,7 @@
                     <div></div>
                 </div>
             </div>
-        </div>
+        </div> -->
   <header class="page-header">
     <div class="page-header__wrapper">
       <h1 class="visually-hidden">Центр Восточной Культуры <strong>Белый Журавль</strong>, город Пермь</h1>
@@ -116,15 +116,15 @@
       </nav>
       <p class="page-header__logo logo">
         <a>
-          <picture>
+          <picture class="logo__crane">
             <source media="(min-width: 960px)" srcset="img/white-crane-logo-1-desktop@2.png 2x, img/white-crane-logo-1-desktop.png 1x">
             <source media="(min-width: 660px)" srcset="img/white-crane-logo-1-tablet@2.png 2x, img/white-crane-logo-1-tablet.png 1x">
-            <img class="logo__crane" src="img/white-crane-logo-1-mobile.png" alt="Логотип центра восточной культуры Белый Журавль" width="57" height="130" srcset="img/white-crane-logo-1-mobile@2.png 2x">
+            <img src="img/white-crane-logo-1-mobile.png" alt="Логотип центра восточной культуры Белый Журавль" width="57" height="130" srcset="img/white-crane-logo-1-mobile@2.png 2x">
           </picture>
-          <picture>
+          <picture class="logo__text">
             <source media="(min-width: 960px)" srcset="img/white-crane-logo-2-desktop@2.png 1x, img/white-crane-logo-2-desktop.png 1x">
             <source media="(min-width: 660px)" srcset="img/white-crane-logo-2-tablet@2.png 2x, img/white-crane-logo-2-tablet.png 1x">
-            <img class="logo__text" src="img/white-crane-logo-2-mobile.png" alt="Логотип центра восточной культуры Белый Журавль" width="239" height="110" srcset="img/white-crane-logo-2-mobile@2.png 2x">
+            <img src="img/white-crane-logo-2-mobile.png" alt="Логотип центра восточной культуры Белый Журавль" width="239" height="110" srcset="img/white-crane-logo-2-mobile@2.png 2x">
           </picture>
         </a>
       </p>
@@ -386,21 +386,27 @@
               <time datetime="2017-11-05">5 ноября 2017</time>
             </p>
             <p class="news__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Маленький подзаголовок буквоград власти которое первую вершину злых последний подпоясал?</p>
-            <p class="news__image">
-              <img src="http://fakeimg.pl/300x200/000000/FFF/?text=news" alt="Новость 1">
-            </p>
-            <a href="#" class="news__link">Подробнее</a>
+            <div class="news__relation relation">
+              <div class="relation__offset"></div>
+              <p class="relation__content news__image">
+                <img src="img/news1.jpg" alt="Новость 1" width="750" height="500">
+              </p>
+            </div>
+            <a href="#" class="button news__link">Подробнее</a>
           </li>
           <li class="news__item">
             <h3>Заголовок новости 2</h3>
             <p class="news__date">
               <time datetime="2017-11-05">5 ноября 2017</time>
             </p>
-            <p class="news__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Маленький подзаголовок буквоград власти которое первую вершину злых последний подпоясал?</p>
-            <p class="news__image">
-              <img src="http://fakeimg.pl/300x200/000000/FFF/?text=news2" alt="Новость 2">
-            </p>
-            <a href="#" class="news__link">Подробнее</a>
+            <p class="news__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Маленький подзаголовок </p>
+            <div class="news__relation relation">
+              <div class="relation__offset"></div>
+              <p class="relation__content news__image">
+                <img src="img/news2.jpg" alt="Новость 2" width="600" height="600">
+              </p>
+            </div>
+            <a href="#" class="button news__link">Подробнее</a>
           </li>
           <li class="news__item">
             <h3>Заголовок новости3</h3>
@@ -408,10 +414,13 @@
               <time datetime="2017-11-05">5 ноября 2017</time>
             </p>
             <p class="news__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Маленький подзаголовок буквоград власти которое первую вершину злых последний подпоясал?</p>
-            <p class="news__image">
-              <img src="http://fakeimg.pl/300x200/000000/FFF/?text=news3" alt="Новость 3">
-            </p>
-            <a href="#" class="news__link">Подробнее</a>
+            <div class="news__relation relation">
+              <div class="relation__offset"></div>
+              <p class="relation__content news__image">
+                <img src="img/news3.jpg" alt="Новость 3" width="1040" height="780">
+              </p>
+            </div>
+            <a href="#" class="button news__link">Подробнее</a>
           </li>
         </ul>
         <a class="button news__all" href="news.html">Все новости</a>
@@ -424,54 +433,72 @@
           <li class="types__item">
             <a class="types__link" href="#">
               <h3 class="types__name">Название1</h3>
-              <p class="types__image">
-                <img src="http://fakeimg.pl/300x200/000000/FFF/?text=type1" alt="Направление 1">
-              </p>
+              <div class="types__relation relation">
+                <div class="relation__offset"></div>
+                <p class="relation__content types__image">
+                  <img src="img/news1.jpg" alt="Направление 1" width="750" height="500">
+                </p>
+              </div>
             </a>
             <p class="types__description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь предложения рекламных однажды текстами!</p>
           </li>
           <li class="types__item">
             <a class="types__link" href="#">
               <h3 class="types__name">Название2</h3>
-              <p class="types__image">
-                <img src="http://fakeimg.pl/300x200/000000/FFF/?text=type2" alt="Направление 1">
-              </p>
+              <div class="types__relation relation">
+                <div class="relation__offset"></div>
+                <p class="relation__content types__image">
+                  <img src="img/news2.jpg" alt="Направление 2" width="600" height="600">
+                </p>
+              </div>
             </a>
             <p class="types__description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь предложения рекламных однажды текстами!</p>
           </li>
           <li class="types__item">
             <a class="types__link" href="#">
               <h3 class="types__name">Название3</h3>
-              <p class="types__image">
-                <img src="http://fakeimg.pl/300x200/000000/FFF/?text=type3" alt="Направление 1">
-              </p>
+              <div class="types__relation relation">
+                <div class="relation__offset"></div>
+                <p class="relation__content types__image">
+                  <img src="img/news3.jpg" alt="Направление 3" width="1040" height="780">
+                </p>
+              </div>
             </a>
             <p class="types__description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь предложения рекламных однажды текстами!</p>
           </li>
           <li class="types__item">
             <a class="types__link" href="#">
               <h3 class="types__name">Название4</h3>
-              <p class="types__image">
-                <img src="http://fakeimg.pl/300x200/000000/FFF/?text=type4" alt="Направление 1">
-              </p>
+              <div class="types__relation relation">
+                <div class="relation__offset"></div>
+                <p class="relation__content types__image">
+                  <img src="img/news4.jpg" alt="Направление 4" width="1280" height="854">
+                </p>
+              </div>
             </a>
             <p class="types__description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь предложения рекламных однажды текстами!</p>
           </li>
           <li class="types__item">
             <a class="types__link" href="#">
               <h3 class="types__name">Название5</h3>
-              <p class="types__image">
-                <img src="http://fakeimg.pl/300x200/000000/FFF/?text=type5" alt="Направление 1">
-              </p>
+              <div class="types__relation relation">
+                <div class="relation__offset"></div>
+                <p class="relation__content types__image">
+                  <img src="img/news5.jpg" alt="Направление 5" width="1280" height="853">
+                </p>
+              </div>
             </a>
             <p class="types__description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь предложения рекламных однажды текстами!</p>
           </li>
           <li class="types__item">
             <a class="types__link" href="#">
               <h3 class="types__name">Название6</h3>
-              <p class="types__image">
-                <img src="http://fakeimg.pl/300x200/000000/FFF/?text=type6" alt="Направление 1">
-              </p>
+              <div class="types__relation relation">
+                <div class="relation__offset"></div>
+                <p class="relation__content types__image">
+                  <img src="img/news6.jpg" alt="Направление 6" width="500" height="342">
+                </p>
+              </div>
             </a>
             <p class="types__description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Путь предложения рекламных однажды текстами!</p>
           </li>
@@ -485,74 +512,90 @@
         <ul class="coaches__list">
           <li class="coaches__item">
             <a class="coaches__link" href="#">
-              <h3 class="coaches__name">Тренер1 <span class="coaches__type">направление</span></h3>
-              <p class="coaches__image">
-                <img src="http://fakeimg.pl/150x150/000000/FFF/?text=coach1" alt="Тренер 1">
-              </p>
+              <h3 class="coaches__name">Сергей Варов <span class="coaches__type">Оздоровительная гимнастика, цигун</span></h3>
+              <div class="coaches__relation relation">
+                <div class="relation__offset"></div>
+                <p class="relation__content coaches__image">
+                  <img src="img/news1.jpg" alt="Тренер 1" width="750" height="500">
+                </p>
+              </div>
             </a>
           </li>
           <li class="coaches__item">
             <a class="coaches__link" href="#">
               <h3 class="coaches__name">Тренер2 <span class="coaches__type">направление</span></h3>
-              <p class="coaches__image">
-                <img src="http://fakeimg.pl/150x150/000000/FFF/?text=coach2" alt="Тренер 2">
-              </p>
+              <div class="coaches__relation relation">
+                <div class="relation__offset"></div>
+                <p class="relation__content coaches__image">
+                  <img src="img/news2.jpg" alt="Тренер 2" width="600" height="600">
+                </p>
+              </div>
             </a>
           </li>
           <li class="coaches__item">
             <a class="coaches__link" href="#">
               <h3 class="coaches__name">Тренер3 <span class="coaches__type">направление</span></h3>
-              <p class="coaches__image">
-                <img src="http://fakeimg.pl/150x150/000000/FFF/?text=coach3" alt="Тренер 3">
-              </p>
+              <div class="coaches__relation relation">
+                <div class="relation__offset"></div>
+                <p class="relation__content coaches__image">
+                  <img src="img/news3.jpg" alt="Тренер 3" width="1040" height="780">
+                </p>
+              </div>
             </a>
           </li>
           <li class="coaches__item">
             <a class="coaches__link" href="#">
               <h3 class="coaches__name">Тренер4 <span class="coaches__type">направление</span></h3>
-              <p class="coaches__image">
-                <img src="http://fakeimg.pl/150x150/000000/FFF/?text=coach4" alt="Тренер 4">
-              </p>
+              <div class="coaches__relation relation">
+                <div class="relation__offset"></div>
+                <p class="relation__content coaches__image">
+                  <img src="img/news4.jpg" alt="Тренер 4" width="1280" height="854">
+                </p>
+              </div>
             </a>
           </li>
           <li class="coaches__item">
             <a class="coaches__link" href="#">
               <h3 class="coaches__name">Тренер5 <span class="coaches__type">направление</span></h3>
-              <p class="coaches__image">
-                <img src="http://fakeimg.pl/150x150/000000/FFF/?text=coach5" alt="Тренер 5">
-              </p>
+              <div class="coaches__relation relation">
+                <div class="relation__offset"></div>
+                <p class="relation__content coaches__image">
+                  <img src="img/news5.jpg" alt="Тренер 5" width="1280" height="853">
+                </p>
+              </div>
             </a>
           </li>
           <li class="coaches__item">
             <a class="coaches__link" href="#">
               <h3 class="coaches__name">Тренер6 <span class="coaches__type">направление</span></h3>
-              <p class="coaches__image">
-                <img src="http://fakeimg.pl/150x150/000000/FFF/?text=coach6" alt="Тренер 6">
-              </p>
+              <div class="coaches__relation relation">
+                <div class="relation__offset"></div>
+                <p class="relation__content coaches__image">
+                  <img src="img/news6.jpg" alt="Тренер 6" width="500" height="342">
+                </p>
+              </div>
             </a>
           </li>
           <li class="coaches__item">
             <a class="coaches__link" href="#">
               <h3 class="coaches__name">Тренер7 <span class="coaches__type">направление</span></h3>
-              <p class="coaches__image">
-                <img src="http://fakeimg.pl/150x150/000000/FFF/?text=coach7" alt="Тренер 7">
-              </p>
+              <div class="coaches__relation relation">
+                <div class="relation__offset"></div>
+                <p class="relation__content coaches__image">
+                  <img src="img/news2.jpg" alt="Тренер 7" width="600" height="600">
+                </p>
+              </div>
             </a>
           </li>
           <li class="coaches__item">
             <a class="coaches__link" href="#">
               <h3 class="coaches__name">Тренер8 <span class="coaches__type">направление</span></h3>
-              <p class="coaches__image">
-                <img src="http://fakeimg.pl/150x150/000000/FFF/?text=coach8" alt="Тренер 8">
-              </p>
-            </a>
-          </li>
-          <li class="coaches__item">
-            <a class="coaches__link" href="#">
-              <h3 class="coaches__name">Тренер9 <span class="coaches__type">направление</span></h3>
-              <p class="coaches__image">
-                <img src="http://fakeimg.pl/150x150/000000/FFF/?text=coach9" alt="Тренер 9">
-              </p>
+              <div class="coaches__relation relation">
+                <div class="relation__offset"></div>
+                <p class="relation__content coaches__image">
+                  <img src="img/news1.jpg" alt="Тренер 8" width="750" height="500">
+                </p>
+              </div>
             </a>
           </li>
         </ul>

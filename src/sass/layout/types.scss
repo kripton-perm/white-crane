@@ -1,5 +1,6 @@
 .types {
   background-color: rgba($green, 0.3);
+  @include padding(1, 1);
 }
 
 .types__wrapper {
@@ -7,7 +8,6 @@
   /*outline: 1px solid red;*/
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .types__title {
@@ -22,28 +22,29 @@
 
 .types__list {
   @include list-reset;
-  width: 100%;
+  @include row-flex;
+  justify-content: center;
   margin-bottom: $padding;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 0;
   }
 }
 
 .types__item {
+  @include padding(1, 1);
+  background-color: white;
+  border-radius: $padding;
+  @include col;
+  @include size(22);
+  @include size-tablet(11.5);
+  @include size-desktop(7.5);
   display: flex;
   flex-direction: column;
 
   @media (min-width: $tablet-width) {
-    width: 48%;
     margin-bottom: $padding;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 30%;
   }
 
   &:nth-child(n+2) {
@@ -55,42 +56,65 @@
 
 .types__link {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   text-decoration: none;
-  color: white;
-  justify-content: center;
 
   &:hover,
-  &:focus {
-    img {
-      transform: scale(1.1);
+  &:focus,
+  &:active {
+    .types__name {
+      color: darken($green, 30%);
+    }
+    .types__image {
+      opacity: 1;
     }
   }
 }
 
 .types__name {
-  position: relative;
-  z-index: 5;
+  align-self: center;
   margin: 0;
+  margin-bottom: $padding / 2;
   padding: 0;
-  width: 100%;
-  text-align: center;
-  margin-top: -3 * $padding;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: $padding;
+  color: $green;
+  transition: all 0.5s;
 }
 
 .types__description {
   margin: 0;
-  padding: 0 $padding;
+  padding: 0;
+  padding-left: 5%;
+  padding-right: 5%;
   text-align: center;
+}
+
+.types__relation {
+  order: -1;
+  width: 80%;
+  align-self: center;
+  margin-bottom: $padding / 2;
 }
 
 .types__image {
   margin: 0;
   padding: 0;
-  order: -1;
-  margin-bottom: $padding / 2;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 2 * $padding;
+  transition: all 0.5s;
+  opacity: 0.75;
 
   img {
-    transition: all 1s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
+
+.types__all {
+  align-self: center;
+}
+

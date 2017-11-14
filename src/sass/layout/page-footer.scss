@@ -1,8 +1,12 @@
 .page-footer {
   background-color: rgba($green, 0.3);
+  border-top-left-radius: $padding;
+  border-top-right-radius: $padding;
   @include padding(1, 0);
   @include desktop-block {
     @include padding(2, 2);
+    border-top-left-radius: 2 * $padding;
+    border-top-right-radius: 2 * $padding;
   };
 }
 
@@ -23,7 +27,6 @@
 }
 
 .page-footer__recall {
-  outline: 1px solid red;
   @include col;
   @include size(22);
   @include size-tablet(11);
@@ -32,17 +35,9 @@
   @include desktop-block {
     margin-bottom: 0;
   };
-  /*@include tablet-block {
-    margin-right: 3%;
-    max-width: 400px;
-  };
-  @include desktop-block {
-    margin-right: 0;
-  };*/
 }
 
 .page-footer__contacts {
-  outline: 1px solid red;
   @include col;
   @include size(22);
   @include size-tablet(11);
@@ -57,7 +52,6 @@
 }
 
 .page-footer__map {
-  outline: 1px solid red;
   @include col;
   @include size(22);
   @include size-tablet(24);

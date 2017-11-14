@@ -1,5 +1,6 @@
 .schedule {
   background-color: rgba($green, 0.3);
+  @include padding(2, 1);
 
   &--nojs {
     .schedule__day {
@@ -10,7 +11,6 @@
 
 .schedule__wrapper {
   @include wrapper;
-  outline: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
