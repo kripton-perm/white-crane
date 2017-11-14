@@ -1,5 +1,6 @@
 .schedule {
   background-color: rgba($green, 0.3);
+  @include padding(2, 1);
 
   &--nojs {
     .schedule__day {
@@ -10,7 +11,6 @@
 
 .schedule__wrapper {
   @include wrapper;
-  /*outline: 1px solid red;*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -187,37 +187,36 @@
 }
 
 .schedule__day {
-  width: 100%;
   display: none;
 
   &--show {
     display: block;
+    @include row-flex;
 
     @media (min-width: $tablet-width) {
-      display: flex;
-      flex-wrap: wrap;
+      @include row-flex;
       justify-content: space-between;
     }
   }
 
   h3 {
-    width: 100%;
     text-align: center;
     margin: 0;
-    margin-bottom: $padding;
     padding: 0;
+    margin-bottom: $padding;
+    @include col;
+    @include size(24);
+    outline: 1px solid red;
   }
 }
 
 .schedule__table {
-  width: 100%;
+  @include col;
+  @include size(24);
+  @include size-tablet(12);
   border-collapse: collapse;
   margin-bottom: $padding;
   background-color: $green;
-
-  @media (min-width: $tablet-width) {
-    width: 48%;
-  }
 
   caption {
     font-size: 18px;
@@ -303,5 +302,14 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &--index {
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      margin-right: 0;
+      
+    }
   }
 }

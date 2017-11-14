@@ -1,20 +1,11 @@
 .about {
   background-color: white;
+  @include padding(2, 2);
 }
 
 .about__wrapper {
   @include wrapper;
   text-align: center;
-
-  /*@media (min-width: $tablet-width) {
-    padding-top: 6 * $padding;
-    padding-bottom: 10 * $padding;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding-top: 6 * $padding;
-    padding-bottom: 18 * $padding;
-  }*/
 }
 
 .about__intro {
@@ -27,8 +18,9 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: $padding;
-    text-align: left;
-    text-indent: 2 * $padding;
+    text-align: justify;
+    padding-left: $padding;
+    padding-right: $padding;
     font-size: 18px;
     line-height: 24px;
   }
@@ -36,17 +28,20 @@
 
 .about__list {
   @include list-reset;
+  @include row-flex;
+  justify-content: center;
   margin-bottom: 2 * $padding;
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: stretch;
   }
 }
 
 .about__item {
+  @include col;
+  @include size(24);
+  @include size-tablet(20);
+  @include size-desktop(8);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -58,10 +53,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 30%;
     padding-left: $padding;
     padding-right: $padding;
-    margin-bottom: 0;
+    margin-bottom: $padding;
     flex-direction: column;
     justify-content: flex-start;
   }
@@ -109,6 +103,11 @@
 .about__description {
   margin: 0;
   padding: 0;
+  @include tablet-block{
+    width: 100%;
+    padding-left: $padding;
+    padding-right: $padding;
+  };
 
   @media (min-width: $desktop-width) {
     margin-top: 0;

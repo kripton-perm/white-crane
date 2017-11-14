@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
 }
-
+/*
 @mixin wrapper {
   width: 100%;
   min-width: $mobile-width;
@@ -24,7 +24,7 @@
     margin: 0 auto;
   }
 }
-
+*/
 @mixin wrapper-desktop-fixed {
   width: 100%;
   min-width: $mobile-width;
@@ -66,4 +66,13 @@
     padding-left: $padding / $desktop-width * 100%;
     padding-right: $padding / $desktop-width * 100%;
   }
+}
+
+@mixin padding($n, $m) {
+  padding-top: $n * $padding;
+  padding-bottom: $m * $padding;
+}
+
+@mixin m-b($n) {
+  margin-bottom: $n * $padding;
 }

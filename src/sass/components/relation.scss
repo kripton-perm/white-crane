@@ -1,0 +1,19 @@
+.relation{
+  position: relative;
+}
+
+.relation__offset {
+  height: 0;
+  padding-top: 75%; // 4x3
+  //padding-top: 100%; // 1x1
+  //padding-top: 56.25%; // 16x9
+  //padding-top: 66.66%; // 3x2
+}
+
+.relation__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}

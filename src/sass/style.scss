@@ -1,12 +1,19 @@
 @import "vendors/normalize.scss";
 
 @import 'helpers/mixins.scss';
+@import 'helpers/smart-grid.scss';
 @import "helpers/variables.scss";
+
+.debug {
+  @include debug(rgba(0, 0, 0, 0.3), 1px solid #ff0);
+  z-index: 500;
+}
 
 @import "base/base.scss";
 @import "base/visually-hidden.scss";
 
 @import "components/button.scss";
+@import "components/relation.scss";
 @import "components/logo.scss";
 @import "components/site-menu.scss";
 @import "components/secondary.scss";
