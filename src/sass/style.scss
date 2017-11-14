@@ -6,6 +6,7 @@
 
 .debug {
   @include debug(rgba(0, 0, 0, 0.3), 1px solid #ff0);
+  z-index: 500;
 }
 
 @import "base/base.scss";

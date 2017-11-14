@@ -4,7 +4,7 @@ $atom: (100% / $columns);
 $break_tablet: 660px;
 $break_desktop: 1020px;
 
-$offset: 2%;
+$offset: 1%;
 $offset_tablet: $offset;
 $offset_desktop: $offset;
 
@@ -266,7 +266,6 @@ $fields_desktop: 30px;
 @mixin debug($background, $outline){
   height: 100vh;
   position: fixed;
-  z-index: 500;
   width: 100%;
   
   > div{

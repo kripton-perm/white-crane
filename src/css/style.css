@@ -491,11 +491,34 @@ template {
   display: none;
 }
 
+/*
+@mixin wrapper {
+  width: 100%;
+  min-width: $mobile-width;
+  padding-left: $padding / $mobile-width * 100%;
+  padding-right: $padding / $mobile-width * 100%;
+  padding-top: 2 * $padding;
+  padding-bottom: 2 * $padding;
+
+  @media (min-width: $tablet-width) {
+    padding-left: $padding / $tablet-width * 100%;
+    padding-right: $padding / $tablet-width * 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1200px;
+    padding-left: $padding / $desktop-width * 100%;
+    padding-right: $padding / $desktop-width * 100%;
+    margin: 0 auto;
+  }
+}
+*/
+
 .debug {
   height: 100vh;
   position: fixed;
-  z-index: 500;
   width: 100%;
+  z-index: 500;
 }
 
 .debug > div {
@@ -513,17 +536,17 @@ template {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: -1%;
-  margin-right: -1%;
+  margin-left: -0.5%;
+  margin-right: -0.5%;
 }
 
 .debug > div > div > div {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   word-wrap: break-word;
-  margin-left: 1%;
-  margin-right: 1%;
-  width: 2.16667%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 3.16667%;
   height: inherit;
   outline: 1px solid #ff0;
   background: rgba(0, 0, 0, 0.3);
@@ -1562,8 +1585,8 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: -1%;
-  margin-right: -1%;
+  margin-left: -0.5%;
+  margin-right: -0.5%;
 }
 
 .schedule__day h3 {
@@ -1574,9 +1597,9 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   word-wrap: break-word;
-  margin-left: 1%;
-  margin-right: 1%;
-  width: 98%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 99%;
   outline: 1px solid red;
 }
 
@@ -1584,9 +1607,9 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   word-wrap: break-word;
-  margin-left: 1%;
-  margin-right: 1%;
-  width: 98%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 99%;
   border-collapse: collapse;
   margin-bottom: 20px;
   background-color: #4c9d46;
@@ -1772,7 +1795,8 @@ img {
 }
 
 .gallery {
-  margin-top: -40px;
+  padding-top: 40px;
+  padding-bottom: 60px;
 }
 
 .gallery__wrapper {
@@ -1780,6 +1804,7 @@ img {
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
+  outline: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1803,11 +1828,31 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -0.5%;
+  margin-right: -0.5%;
   margin-bottom: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .gallery__item {
   position: relative;
+  background-color: #dbefda;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 90.66667%;
+  border-radius: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1825,6 +1870,7 @@ img {
 .gallery__item h3 {
   margin: 0;
   padding: 0;
+  padding-left: 20px;
   color: #4c9d46;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -1835,6 +1881,7 @@ img {
 .gallery__date {
   margin: 0;
   padding: 0;
+  padding-right: 20px;
   margin-left: auto;
 }
 
@@ -1843,44 +1890,46 @@ img {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 0;
+  padding: 20px;
+  font-size: 16px;
 }
 
-.gallery__image {
+.gallery__relation {
+  position: relative;
+  width: 70%;
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
+  margin-bottom: 10px;
+}
+
+.gallery__offset {
+  height: 0;
+  padding-top: 75%;
+}
+
+.gallery__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: auto;
   text-align: center;
-  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 40px;
 }
 
 .gallery__image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .gallery__link {
-  color: #4c9d46;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 18px;
-  padding: 10px;
-  border: 2px solid #4c9d46;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
   margin-top: auto;
-}
-
-.gallery__link:hover,
-.gallery__link:focus {
-  color: white;
-  background-color: #4c9d46;
 }
 
 .types {
@@ -2138,7 +2187,7 @@ img {
   }
 
   .schedule__table {
-    width: 48%;
+    width: 49%;
   }
 
   .news__wrapper {
@@ -2149,6 +2198,30 @@ img {
   .gallery__wrapper {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .gallery__item {
+    width: 44.83333%;
+  }
+
+  .gallery__item {
+    border-radius: 20px;
+  }
+
+  .gallery__text {
+    font-size: 18px;
+  }
+
+  .gallery__relation {
+    width: 80%;
+  }
+
+  .gallery__relation {
+    margin-bottom: 20px;
+  }
+
+  .gallery__image {
+    border-radius: 20px;
   }
 
   .types__wrapper {
@@ -2416,8 +2489,8 @@ img {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-left: -1%;
-    margin-right: -1%;
+    margin-left: -0.5%;
+    margin-right: -0.5%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -2437,8 +2510,12 @@ img {
   .schedule__signup {
     font-size: 20px;
     line-height: 30px;
-    margin-left: auto;
-    margin-right: auto;
+  }
+
+  .schedule__signup--index {
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 0;
   }
 
   .news__title {
@@ -2467,18 +2544,11 @@ img {
   }
 
   .gallery__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 
   .gallery__item {
-    width: 45%;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -2610,6 +2680,10 @@ img {
   .gallery__wrapper {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .gallery__item {
+    width: 30.25%;
   }
 
   .types__wrapper {
@@ -2853,10 +2927,6 @@ img {
   }
 
   .news__item {
-    width: 30%;
-  }
-
-  .gallery__item {
     width: 30%;
   }
 

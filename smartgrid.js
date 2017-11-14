@@ -3,7 +3,7 @@ var smartgrid = require('smart-grid');
 var settings = {
   outputStyle: 'scss',  
   columns: 24,
-  offset: '2%',
+  offset: '1%',
   mobileFirst: true,
   container: {
     minWidth: '320px',
