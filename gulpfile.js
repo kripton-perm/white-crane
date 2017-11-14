@@ -12,7 +12,7 @@ var config = {
     src: './src',
     css: {
         watch: '/sass/**/*.scss',
-        src: '/sass/styles.scss',
+        src: '/sass/style.scss',
         dest: '/css'
     },
     html: {
