@@ -1,38 +1,40 @@
 {
-  "name": "swd42",
+  "name": "white-crane",
   "version": "0.1.0",
   "private": true,
-  "description": "Главная страница веб-студии 42",
+  "main": "gulpfile.js",
+  "description": "Сайт для центра восточной культуры Белый Журавль",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
-    "autoprefixer": "7.1.x",
+    "autoprefixer": "^7.1.6",
     "browser-sync": "2.18.x",
     "gulp": "3.9.x",
+    "gulp-group-css-media-queries": "^1.2.0",
     "gulp-plumber": "1.1.x",
     "gulp-postcss": "7.0.x",
     "gulp-sass": "3.1.x",
-    "run-sequence": "^2.2.0",
+    "gulp-sourcemaps": "^2.6.0",
     "stylelint": "8.1.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint 'sass/**/*.scss' --syntax scss",
+    "stylelint": "stylelint 'src/sass/**/*.scss' --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "start": "gulp serve"
   },
   "browserslist": [
-    "last 2 versions",
-    "IE 11",
+    "last 3 versions",
+    "IE 10",
     "Firefox ESR"
   ],
   "editorconfig-cli": [
-    "*.html",
+    "src/*.html",
     "*.json",
     "*.js",
-    "js/**/*.js",
-    "img/**/*.svg",
-    "sass/**/*.{sass,scss}"
+    "src/js/**/*.js",
+    "src/img/**/*.svg",
+    "src/sass/**/*.{sass,scss}"
   ],
   "engines": {
     "node": "8.2"
