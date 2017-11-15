@@ -1,4 +1,5 @@
 .news__wrapper {
+  background-color: rgba($green, 0.3);
   @include wrapper;
   @include padding(2, 1);
   display: flex;
@@ -30,7 +31,7 @@
 }
 
 .news__item {
-  background-color: lighten($green, 40%);
+  background-color: white;
   border-radius: $padding;
   @include padding(1, 1);
   @include col;
@@ -130,12 +131,12 @@
   border: 2px solid $green;
   transition: all 0.5s;
   margin-top: auto;
-  margin-left: 5%;
   font-size: 14px;
   line-height: 16px;
 
   @media (max-width: $mobile-width-only) {
     align-self: flex-start;
+    margin-left: 5%;
   }
 
   &:hover,

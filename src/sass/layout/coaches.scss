@@ -39,6 +39,9 @@
   @include size(22);
   @include size-tablet(11.5);
   @include size-desktop(5.5);
+  @include desktop-block{
+    display: flex;
+  };
   &:nth-child(n+2) {
     @media (max-width: $mobile-width-only) {
       display: none;
@@ -54,11 +57,27 @@
       display: none;
     }
   }
+
+  &:nth-child(2n) {
+    .coaches__relation {
+      @include desktop-block{
+        order: 0;
+        margin-bottom: 0;
+        margin-top: auto;
+      };
+    }
+    .coaches__name {
+      @include desktop-block{
+        margin-top: 0;
+      };
+    }
+  }
 }
 
 .coaches__link {
-  display: block;
-  @include row-flex;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   text-decoration: none;
   color: black;
@@ -80,11 +99,11 @@
 
 .coaches__name {
   margin: 0;
+  margin-top: auto;
   padding: 0;
-  @include col;
-  @include size(22);
-  @include size-tablet(18);
   text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .coaches__type {
@@ -96,8 +115,7 @@
 
 .coaches__relation {
   order: -1;
-  @include col;
-  @include size(18);
+  width: 75%;
   align-self: center;
   margin-bottom: $padding;
 

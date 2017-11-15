@@ -1499,7 +1499,6 @@ img {
 }
 
 .schedule {
-  background-color: rgba(76, 157, 70, 0.3);
   padding-top: 40px;
   padding-bottom: 20px;
 }
@@ -1633,6 +1632,9 @@ img {
       flex-wrap: wrap;
   margin-left: -0.5%;
   margin-right: -0.5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .schedule__day h3 {
@@ -1646,7 +1648,6 @@ img {
   margin-left: 0.5%;
   margin-right: 0.5%;
   width: 99%;
-  outline: 1px solid red;
 }
 
 .schedule__table {
@@ -1655,10 +1656,10 @@ img {
   word-wrap: break-word;
   margin-left: 0.5%;
   margin-right: 0.5%;
-  width: 99%;
+  width: 94.83333%;
   border-collapse: collapse;
   margin-bottom: 20px;
-  background-color: #4c9d46;
+  background-color: #87c782;
 }
 
 .schedule__table caption {
@@ -1676,7 +1677,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px solid #10220f;
+  border: 1px solid #448c3e;
   font-size: 16px;
   line-height: 20px;
   padding: 10px;
@@ -1690,7 +1691,7 @@ img {
 }
 
 .schedule__item:last-child {
-  border-bottom: 1px solid #10220f;
+  border-bottom: 1px solid #448c3e;
 }
 
 .schedule__item td {
@@ -1731,6 +1732,7 @@ img {
 }
 
 .news__wrapper {
+  background-color: rgba(76, 157, 70, 0.3);
   max-width: 1300px;
   margin: 0 auto;
   padding-left: 10px;
@@ -1774,7 +1776,7 @@ img {
 }
 
 .news__item {
-  background-color: #cae7c8;
+  background-color: white;
   border-radius: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -1864,7 +1866,6 @@ img {
   -o-transition: all 0.5s;
   transition: all 0.5s;
   margin-top: auto;
-  margin-left: 5%;
   font-size: 14px;
   line-height: 16px;
 }
@@ -2202,14 +2203,14 @@ img {
 }
 
 .coaches__link {
-  display: block;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -0.5%;
-  margin-right: -0.5%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2237,14 +2238,11 @@ img {
 
 .coaches__name {
   margin: 0;
+  margin-top: auto;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 0.5%;
-  margin-right: 0.5%;
-  width: 90.66667%;
   text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .coaches__type {
@@ -2258,12 +2256,7 @@ img {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 0.5%;
-  margin-right: 0.5%;
-  width: 74%;
+  width: 75%;
   -ms-flex-item-align: center;
       align-self: center;
   margin-bottom: 20px;
@@ -2432,13 +2425,31 @@ img {
     padding-right: 20px;
   }
 
+  .schedule--index .schedule__wrapper {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
   .schedule__wrapper {
     padding-left: 20px;
     padding-right: 20px;
   }
 
+  .schedule__wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
   .schedule__table {
-    width: 49%;
+    width: 47.75%;
   }
 
   .news__wrapper {
@@ -2495,10 +2506,6 @@ img {
 
   .coaches__item {
     width: 46.91667%;
-  }
-
-  .coaches__name {
-    width: 74%;
   }
 
   .page-footer__wrapper {
@@ -2726,18 +2733,6 @@ img {
     margin-bottom: 10px;
   }
 
-  .schedule__wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-
   .schedule__title {
     margin-bottom: 40px;
   }
@@ -2941,6 +2936,24 @@ img {
 
   .coaches__item {
     width: 21.91667%;
+  }
+
+  .coaches__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .coaches__item:nth-child(2n) .coaches__relation {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin-bottom: 0;
+    margin-top: auto;
+  }
+
+  .coaches__item:nth-child(2n) .coaches__name {
+    margin-top: 0;
   }
 
   .page-footer {
@@ -3299,6 +3312,7 @@ img {
   .news__link {
     -ms-flex-item-align: start;
         align-self: flex-start;
+    margin-left: 5%;
   }
 
   .gallery__item:last-child {
