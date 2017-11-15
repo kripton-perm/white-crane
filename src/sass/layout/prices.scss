@@ -1,15 +1,8 @@
 .prices {
   @include padding(0, 1);
-
-  &--nojs {
-    .prices__table {
-      position: static;
-    }
-
-    .prices__tabs {
-      display: none;
-    }
-  }
+  @include desktop-block{
+    @include padding(2, 3);
+  };
 }
 
 .prices__wrapper {
@@ -31,189 +24,14 @@
     white-space: nowrap;
   }
 }
-/*
-.prices__days-list {
-  @include list-reset;
-  display: flex;
-  margin-bottom: $padding;
 
-  @media (min-width: $tablet-width) {
-    margin-top: -$padding;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-.prices__days-item {
-  margin: $padding / 4;
-
-  @media (min-width: $tablet-width) {
-    margin: $padding / 2;
-  }
-
-  &:nth-child(1) {
-    .prices__days-button {
-      &::before {
-        content: "пн";
-
-        @media (min-width: $desktop-width) {
-          content: "понедельник";
-        }
-      }
-    }
-  }
-
-  &:nth-child(2) {
-    .prices__days-button {
-      &::before {
-        content: "вт";
-
-        @media (min-width: $desktop-width) {
-          content: "вторник";
-        }
-      }
-    }
-  }
-
-  &:nth-child(3) {
-    .prices__days-button {
-      &::before {
-        content: "ср";
-
-        @media (min-width: $desktop-width) {
-          content: "среда";
-        }
-      }
-    }
-  }
-
-  &:nth-child(4) {
-    .prices__days-button {
-      &::before {
-        content: "чт";
-
-        @media (min-width: $desktop-width) {
-          content: "четверг";
-        }
-      }
-    }
-  }
-
-  &:nth-child(5) {
-    .prices__days-button {
-      &::before {
-        content: "пт";
-
-        @media (min-width: $desktop-width) {
-          content: "пятница";
-        }
-      }
-    }
-  }
-
-  &:nth-child(6) {
-    .prices__days-button {
-      &::before {
-        content: "сб";
-
-        @media (min-width: $desktop-width) {
-          content: "суббота";
-        }
-      }
-    }
-  }
-
-  &:nth-child(7) {
-    .prices__days-button {
-      &::before {
-        content: "вс";
-
-        @media (min-width: $desktop-width) {
-          content: "воскресенье";
-        }
-      }
-    }
-  }
-}
-
-.prices__days-button {
-  border: 2px solid $green;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-
-  @media (min-width: $tablet-width) {
-    width: auto;
-    height: auto;
-    padding: $padding / 4;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding: $padding / 2;
-  }
-
-  &::before {
-    text-transform: uppercase;
-    color: $green;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: $green;
-
-    &::before {
-      color: white;
-    }
-  }
-
-  &--current {
-    pointer-events: none;
-    background-color: $green;
-
-    &::before {
-      color: white;
-    }
-  }
-}
-
-.prices__day {
-  display: none;
-
-  &--show {
-    display: block;
-    @include row-flex;
-    justify-content: center;
-
-    @media (min-width: $tablet-width) {
-      @include row-flex;
-      justify-content: space-between;
-    }
-  }
-
-  h3 {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    margin-bottom: $padding;
-    @include col;
-    @include size(24);
-  }
-}
-*/
 .prices__list {
   @include row-flex;
   justify-content: center;
 }
 
 .prices__table {
-  //outline: 1px solid red;
   background-color: lighten($green, 50%);
-  //border-radius: 10px;
-  //overflow: hidden;
   @include col;
   @include size(24);
   border-collapse: collapse;
@@ -413,22 +231,3 @@
     border-bottom: 1px solid $green;
   }
 }
-
-
-/*.prices__item {
-  @include row-flex;
-  justify-content: space-between;
-  font-size: 16px;
-  line-height: 20px;
-  padding: $padding / 2;
-  color: black;
-
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 24px;
-  }
-  
-  td {
-    padding: $padding / 4;
-  }
-}*/
