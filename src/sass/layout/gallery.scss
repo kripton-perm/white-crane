@@ -1,5 +1,23 @@
 .gallery {
   @include padding(0, 3);
+
+  &--coaches {
+    .relation__offset {
+      padding-top: 100%;
+    }
+    .gallery__image {
+      border-radius: 50%;
+    }
+    .gallery__item {
+      h3 {
+        align-self: center;
+        text-align: center;
+        margin-bottom: $padding / 4;
+        padding-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 .gallery__wrapper {
@@ -42,14 +60,9 @@
   border-radius: 3 * $padding;
   @include tablet(border-radius, $padding);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   @include m-b(1.5);
-
-  @media (min-width: $tablet-width) {
-    align-items: flex-start;
-  }
 
   &:last-child {
     @media (max-width: $mobile-width-only) {
@@ -62,8 +75,8 @@
     padding: 0;
     padding-left: $padding;
     color: $green;
-    flex-grow: 1;
     margin-right: $padding;
+    align-self: flex-start;
   }
 }
 
@@ -72,6 +85,14 @@
   padding: 0;
   padding-right: $padding;
   margin-left: auto;
+}
+
+.gallery__type {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: $padding;
 }
 
 .gallery__text {
