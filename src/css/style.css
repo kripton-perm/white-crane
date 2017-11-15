@@ -1270,6 +1270,7 @@ img {
   position: relative;
   z-index: 0;
   margin-top: 20px;
+  margin-left: 5%;
   font-size: 18px;
 }
 
@@ -1499,13 +1500,16 @@ img {
 }
 
 .schedule {
-  background-color: rgba(76, 157, 70, 0.3);
   padding-top: 40px;
   padding-bottom: 20px;
 }
 
 .schedule--nojs .schedule__day {
   position: static;
+}
+
+.schedule--nojs .schedule__days-list {
+  display: none;
 }
 
 .schedule__wrapper {
@@ -1633,6 +1637,9 @@ img {
       flex-wrap: wrap;
   margin-left: -0.5%;
   margin-right: -0.5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .schedule__day h3 {
@@ -1646,7 +1653,6 @@ img {
   margin-left: 0.5%;
   margin-right: 0.5%;
   width: 99%;
-  outline: 1px solid red;
 }
 
 .schedule__table {
@@ -1655,10 +1661,10 @@ img {
   word-wrap: break-word;
   margin-left: 0.5%;
   margin-right: 0.5%;
-  width: 99%;
+  width: 94.83333%;
   border-collapse: collapse;
   margin-bottom: 20px;
-  background-color: #4c9d46;
+  background-color: #87c782;
 }
 
 .schedule__table caption {
@@ -1676,7 +1682,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px solid #10220f;
+  border: 1px solid #448c3e;
   font-size: 16px;
   line-height: 20px;
   padding: 10px;
@@ -1690,7 +1696,7 @@ img {
 }
 
 .schedule__item:last-child {
-  border-bottom: 1px solid #10220f;
+  border-bottom: 1px solid #448c3e;
 }
 
 .schedule__item td {
@@ -1730,7 +1736,490 @@ img {
   margin-bottom: 20px;
 }
 
+.prices {
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+.prices--nojs .prices__table {
+  position: static;
+}
+
+.prices--nojs .prices__tabs {
+  display: none;
+}
+
+.prices__wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.prices__title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.prices__title time {
+  white-space: nowrap;
+}
+
+/*
+.prices__days-list {
+  @include list-reset;
+  display: flex;
+  margin-bottom: $padding;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -$padding;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.prices__days-item {
+  margin: $padding / 4;
+
+  @media (min-width: $tablet-width) {
+    margin: $padding / 2;
+  }
+
+  &:nth-child(1) {
+    .prices__days-button {
+      &::before {
+        content: "пн";
+
+        @media (min-width: $desktop-width) {
+          content: "понедельник";
+        }
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    .prices__days-button {
+      &::before {
+        content: "вт";
+
+        @media (min-width: $desktop-width) {
+          content: "вторник";
+        }
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    .prices__days-button {
+      &::before {
+        content: "ср";
+
+        @media (min-width: $desktop-width) {
+          content: "среда";
+        }
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    .prices__days-button {
+      &::before {
+        content: "чт";
+
+        @media (min-width: $desktop-width) {
+          content: "четверг";
+        }
+      }
+    }
+  }
+
+  &:nth-child(5) {
+    .prices__days-button {
+      &::before {
+        content: "пт";
+
+        @media (min-width: $desktop-width) {
+          content: "пятница";
+        }
+      }
+    }
+  }
+
+  &:nth-child(6) {
+    .prices__days-button {
+      &::before {
+        content: "сб";
+
+        @media (min-width: $desktop-width) {
+          content: "суббота";
+        }
+      }
+    }
+  }
+
+  &:nth-child(7) {
+    .prices__days-button {
+      &::before {
+        content: "вс";
+
+        @media (min-width: $desktop-width) {
+          content: "воскресенье";
+        }
+      }
+    }
+  }
+}
+
+.prices__days-button {
+  border: 2px solid $green;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    height: auto;
+    padding: $padding / 4;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: $padding / 2;
+  }
+
+  &::before {
+    text-transform: uppercase;
+    color: $green;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $green;
+
+    &::before {
+      color: white;
+    }
+  }
+
+  &--current {
+    pointer-events: none;
+    background-color: $green;
+
+    &::before {
+      color: white;
+    }
+  }
+}
+
+.prices__day {
+  display: none;
+
+  &--show {
+    display: block;
+    @include row-flex;
+    justify-content: center;
+
+    @media (min-width: $tablet-width) {
+      @include row-flex;
+      justify-content: space-between;
+    }
+  }
+
+  h3 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: $padding;
+    @include col;
+    @include size(24);
+  }
+}
+*/
+
+.prices__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -0.5%;
+  margin-right: -0.5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.prices__table {
+  background-color: #ecf6ec;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 99%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.prices__table caption {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.prices__table--common .prices__head {
+  background-color: #4c9d46;
+}
+
+.prices__table--common .prices__head th:nth-child(1) {
+  display: none;
+}
+
+.prices__table--common .prices__head th:nth-child(n+2) {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 24%;
+}
+
+.prices__table--common .prices__item td:nth-child(1) {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 99%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.prices__table--common .prices__item td:nth-child(n+2) {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 24%;
+  text-align: center;
+}
+
+.prices__table--common .prices__item:nth-child(2n-1) {
+  background-color: #4c9d46;
+}
+
+.prices__table--unlim .prices__head {
+  background-color: #4c9d46;
+}
+
+.prices__table--unlim .prices__head th {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 24%;
+}
+
+.prices__table--unlim .prices__item td {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 24%;
+  text-align: center;
+}
+
+.prices__table--massages .prices__head {
+  background-color: #4c9d46;
+}
+
+.prices__table--massages .prices__head th:nth-child(1) {
+  display: none;
+}
+
+.prices__table--massages .prices__head th:nth-child(2) {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 15.66667%;
+}
+
+.prices__table--massages .prices__head th:nth-child(n+3) {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 19.83333%;
+}
+
+.prices__table--massages .prices__item td:nth-child(1) {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 99%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.prices__table--massages .prices__item td:nth-child(2) {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 15.66667%;
+  text-align: center;
+}
+
+.prices__table--massages .prices__item td:nth-child(n+3) {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 19.83333%;
+  text-align: center;
+}
+
+.prices__table--massages .prices__item:nth-child(2n-1) {
+  background-color: #4c9d46;
+}
+
+.prices__table--others .prices__head {
+  background-color: #4c9d46;
+}
+
+.prices__table--others .prices__head th:nth-child(1) {
+  display: none;
+}
+
+.prices__table--others .prices__head th:nth-child(2) {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 15.66667%;
+}
+
+.prices__table--others .prices__head th:nth-child(n+3) {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 19.83333%;
+}
+
+.prices__table--others .prices__item td:nth-child(1) {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 99%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.prices__table--others .prices__item td:nth-child(2) {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 15.66667%;
+  text-align: center;
+}
+
+.prices__table--others .prices__item td:nth-child(n+3) {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  width: 19.83333%;
+  text-align: center;
+}
+
+.prices__table--others .prices__item:nth-child(2n-1) {
+  background-color: #4c9d46;
+}
+
+.prices__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -0.5%;
+  margin-right: -0.5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #4c9d46;
+  border-bottom: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.prices__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -0.5%;
+  margin-right: -0.5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #4c9d46;
+  border-bottom: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.prices__item:last-child {
+  border-bottom: 1px solid #4c9d46;
+}
+
+/*.prices__item {
+  @include row-flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 20px;
+  padding: $padding / 2;
+  color: black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  td {
+    padding: $padding / 4;
+  }
+}*/
+
 .news__wrapper {
+  background-color: rgba(76, 157, 70, 0.3);
   max-width: 1300px;
   margin: 0 auto;
   padding-left: 10px;
@@ -1774,7 +2263,7 @@ img {
 }
 
 .news__item {
-  background-color: #cae7c8;
+  background-color: white;
   border-radius: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -1864,7 +2353,6 @@ img {
   -o-transition: all 0.5s;
   transition: all 0.5s;
   margin-top: auto;
-  margin-left: 5%;
   font-size: 14px;
   line-height: 16px;
 }
@@ -2202,14 +2690,14 @@ img {
 }
 
 .coaches__link {
-  display: block;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -0.5%;
-  margin-right: -0.5%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2237,14 +2725,11 @@ img {
 
 .coaches__name {
   margin: 0;
+  margin-top: auto;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 0.5%;
-  margin-right: 0.5%;
-  width: 90.66667%;
   text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .coaches__type {
@@ -2258,12 +2743,7 @@ img {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 0.5%;
-  margin-right: 0.5%;
-  width: 74%;
+  width: 75%;
   -ms-flex-item-align: center;
       align-self: center;
   margin-bottom: 20px;
@@ -2379,9 +2859,18 @@ img {
     padding-right: 20px;
   }
 
+  .title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
   .site-menu {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .recall__title {
+    font-size: 24px;
   }
 
   .signup__wrapper {
@@ -2432,13 +2921,36 @@ img {
     padding-right: 20px;
   }
 
+  .schedule--index .schedule__wrapper {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
   .schedule__wrapper {
     padding-left: 20px;
     padding-right: 20px;
   }
 
+  .schedule__wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
   .schedule__table {
-    width: 49%;
+    width: 47.75%;
+  }
+
+  .prices__wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .news__wrapper {
@@ -2497,10 +3009,6 @@ img {
     width: 46.91667%;
   }
 
-  .coaches__name {
-    width: 74%;
-  }
-
   .page-footer__wrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -2513,15 +3021,19 @@ img {
   }
 
   .page-footer__recall {
-    width: 44.83333%;
+    width: 46.91667%;
+  }
+
+  .page-footer__recall {
+    margin-bottom: 0;
   }
 
   .page-footer__contacts {
-    width: 44.83333%;
+    width: 46.91667%;
   }
 
   .page-footer__contacts {
-    margin-bottom: 40px;
+    margin-bottom: 0;
   }
 
   .page-footer__map {
@@ -2534,16 +3046,6 @@ img {
 }
 
 @media (min-width: 660px) {
-  .title {
-    font-size: 30px;
-    line-height: 40px;
-  }
-
-  .title {
-    font-size: 40px;
-    line-height: 50px;
-  }
-
   .button {
     font-size: 24px;
     line-height: 36px;
@@ -2726,18 +3228,6 @@ img {
     margin-bottom: 10px;
   }
 
-  .schedule__wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-
   .schedule__title {
     margin-bottom: 40px;
   }
@@ -2795,6 +3285,10 @@ img {
     font-size: 20px;
     line-height: 30px;
     margin-right: 0;
+  }
+
+  .prices__title {
+    margin-bottom: 40px;
   }
 
   .news__list {
@@ -2862,6 +3356,11 @@ img {
     padding-right: 30px;
   }
 
+  .title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
   .site-menu {
     padding-left: 30px;
     padding-right: 30px;
@@ -2907,6 +3406,111 @@ img {
     padding-right: 30px;
   }
 
+  .prices__wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .prices__table--common .prices__head th:nth-child(1) {
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    word-wrap: break-word;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+  }
+
+  .prices__table--common .prices__head th:nth-child(n+2) {
+    width: 15.66667%;
+  }
+
+  .prices__table--common .prices__item td:nth-child(1) {
+    width: 32.33333%;
+  }
+
+  .prices__table--common .prices__item td:nth-child(1) {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .prices__table--common .prices__item td:nth-child(n+2) {
+    width: 15.66667%;
+  }
+
+  .prices__table--unlim {
+    width: 65.66667%;
+  }
+
+  .prices__table--massages .prices__head th:nth-child(1) {
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    word-wrap: break-word;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    text-align: left;
+  }
+
+  .prices__table--massages .prices__head th:nth-child(2) {
+    width: 11.5%;
+  }
+
+  .prices__table--massages .prices__head th:nth-child(n+3) {
+    width: 11.5%;
+  }
+
+  .prices__table--massages .prices__item td:nth-child(1) {
+    width: 36.5%;
+  }
+
+  .prices__table--massages .prices__item td:nth-child(1) {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .prices__table--massages .prices__item td:nth-child(2) {
+    width: 11.5%;
+  }
+
+  .prices__table--massages .prices__item td:nth-child(n+3) {
+    width: 11.5%;
+  }
+
+  .prices__table--others .prices__head th:nth-child(1) {
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    word-wrap: break-word;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    text-align: left;
+  }
+
+  .prices__table--others .prices__head th:nth-child(2) {
+    width: 11.5%;
+  }
+
+  .prices__table--others .prices__head th:nth-child(n+3) {
+    width: 11.5%;
+  }
+
+  .prices__table--others .prices__item td:nth-child(1) {
+    width: 36.5%;
+  }
+
+  .prices__table--others .prices__item td:nth-child(1) {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .prices__table--others .prices__item td:nth-child(2) {
+    width: 11.5%;
+  }
+
+  .prices__table--others .prices__item td:nth-child(n+3) {
+    width: 11.5%;
+  }
+
   .news__wrapper {
     padding-left: 30px;
     padding-right: 30px;
@@ -2943,6 +3547,24 @@ img {
     width: 21.91667%;
   }
 
+  .coaches__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .coaches__item:nth-child(2n) .coaches__relation {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin-bottom: 0;
+    margin-top: auto;
+  }
+
+  .coaches__item:nth-child(2n) .coaches__name {
+    margin-top: 0;
+  }
+
   .page-footer {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -2968,10 +3590,6 @@ img {
     width: 44.83333%;
   }
 
-  .page-footer__recall {
-    margin-bottom: 0;
-  }
-
   .page-footer__contacts {
     width: 99%;
   }
@@ -2980,6 +3598,7 @@ img {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+    margin-bottom: 40px;
   }
 
   .page-footer__map {
@@ -3187,6 +3806,20 @@ img {
   }
 }
 
+@media screen and (min-width: 1020px) and (min-width: 1020px) {
+  .prices__table--common .prices__head th:nth-child(1) {
+    width: 32.33333%;
+  }
+
+  .prices__table--massages .prices__head th:nth-child(1) {
+    width: 36.5%;
+  }
+
+  .prices__table--others .prices__head th:nth-child(1) {
+    width: 36.5%;
+  }
+}
+
 @media (max-width: 1019px) {
   .form__fieldset--comment {
     width: 100%;
@@ -3299,6 +3932,7 @@ img {
   .news__link {
     -ms-flex-item-align: start;
         align-self: flex-start;
+    margin-left: 5%;
   }
 
   .gallery__item:last-child {
