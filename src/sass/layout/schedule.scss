@@ -5,6 +5,10 @@
     .schedule__day {
       position: static;
     }
+
+    .schedule__days-list {
+      display: none;
+    }
   }
 
   &--index {

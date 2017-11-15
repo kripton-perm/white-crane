@@ -29,14 +29,12 @@ img {
   font-weight: 700;
   color: $green;
   text-align: center;
-
-  @media (min-width: $tablet-width) {
+  @include tablet-block{
     font-size: 30px;
     line-height: 40px;
-  }
-
-  @media (min-width: $tablet-width) {
+  };
+  @include desktop-block{
     font-size: 40px;
     line-height: 50px;
-  }
+  };
 }

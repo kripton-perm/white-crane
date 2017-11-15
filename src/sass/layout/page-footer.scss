@@ -29,10 +29,10 @@
 .page-footer__recall {
   @include col;
   @include size(22);
-  @include size-tablet(11);
+  @include size-tablet(11.5);
   @include size-desktop(11);
   margin-bottom: $padding;
-  @include desktop-block {
+  @include tablet-block {
     margin-bottom: 0;
   };
 }
@@ -40,14 +40,15 @@
 .page-footer__contacts {
   @include col;
   @include size(22);
-  @include size-tablet(11);
+  @include size-tablet(11.5);
   @include size-desktop(24);
   margin-bottom: $padding;
   @include tablet-block {
-    margin-bottom: 2 * $padding;
+    margin-bottom: 0;
   };
   @include desktop-block {
     order: -1;
+    margin-bottom: 2 * $padding;
   };
 }
 
