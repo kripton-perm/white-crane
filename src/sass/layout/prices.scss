@@ -31,7 +31,6 @@
 }
 
 .prices__table {
-  background-color: lighten($green, 50%);
   @include col;
   @include size(24);
   border-collapse: collapse;
@@ -79,9 +78,6 @@
         @include size(6);
         @include size-desktop(4);
         text-align: center;
-      }
-      &:nth-child(2n-1) {
-        background-color: $green;
       }
     }
   }
@@ -152,9 +148,6 @@
         @include size-desktop(3);
         text-align: center;
       }
-      &:nth-child(2n-1) {
-        background-color: $green;
-      }
     }
   }
 
@@ -205,9 +198,6 @@
         @include size-desktop(3);
         text-align: center;
       }
-      &:nth-child(2n-1) {
-        background-color: $green;
-      }
     }
   }
 }
@@ -226,6 +216,12 @@
   border: 1px solid $green;
   border-bottom: none;
   @include padding(0.5, 0.5);
+  &:nth-child(2n-1) {
+    background-color: $green;
+  }
+  &:nth-child(2n) {
+    background-color: lighten($green, 50%);
+  }
 
   &:last-child {
     border-bottom: 1px solid $green;
