@@ -39,7 +39,6 @@
   @include wrapper;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .gallery__title {
@@ -60,7 +59,7 @@
   justify-content: center;
 
   @media (min-width: $tablet-width) {
-    justify-content: space-around;
+    justify-content: flex-start;
   }
 }
 
@@ -70,8 +69,8 @@
   @include padding(1, 1);
   @include col;
   @include size(22);
-  @include size-tablet(11);
-  @include size-desktop(7.5);
+  @include size-tablet(12);
+  @include size-desktop(8);
   border-radius: 3 * $padding;
   @include tablet(border-radius, $padding);
   display: flex;
@@ -145,6 +144,10 @@
 
 .gallery__link {
   margin-top: auto;
+}
+
+.gallery__pagination {
+  align-self: center;
 }
 
 

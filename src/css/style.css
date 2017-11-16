@@ -714,6 +714,10 @@ img {
   color: white;
 }
 
+.secondary__link--current {
+  color: black;
+}
+
 .form {
   background-color: transparent;
   margin: 0;
@@ -1774,7 +1778,6 @@ img {
 }
 
 .prices__table {
-  background-color: #ecf6ec;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   word-wrap: break-word;
@@ -1829,10 +1832,6 @@ img {
   margin-right: 0.5%;
   width: 24%;
   text-align: center;
-}
-
-.prices__table--common .prices__item:nth-child(2n-1) {
-  background-color: #4c9d46;
 }
 
 .prices__table--unlim .prices__head {
@@ -1915,10 +1914,6 @@ img {
   text-align: center;
 }
 
-.prices__table--massages .prices__item:nth-child(2n-1) {
-  background-color: #4c9d46;
-}
-
 .prices__table--others .prices__head {
   background-color: #4c9d46;
 }
@@ -1976,10 +1971,6 @@ img {
   text-align: center;
 }
 
-.prices__table--others .prices__item:nth-child(2n-1) {
-  background-color: #4c9d46;
-}
-
 .prices__head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2012,6 +2003,14 @@ img {
   border-bottom: none;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.prices__item:nth-child(2n-1) {
+  background-color: #4c9d46;
+}
+
+.prices__item:nth-child(2n) {
+  background-color: #ecf6ec;
 }
 
 .prices__item:last-child {
@@ -2210,9 +2209,6 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .gallery__title {
@@ -2323,6 +2319,11 @@ img {
 
 .gallery__link {
   margin-top: auto;
+}
+
+.gallery__pagination {
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .types {
@@ -2804,7 +2805,7 @@ img {
   }
 
   .gallery__item {
-    width: 44.83333%;
+    width: 49%;
   }
 
   .gallery__item {
@@ -2935,6 +2936,10 @@ img {
 
   .site-menu__secondary {
     display: none;
+  }
+
+  .secondary__link--current {
+    color: white;
   }
 
   .form {
@@ -3145,8 +3150,9 @@ img {
   }
 
   .gallery__list {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 
   .types__title {
@@ -3361,7 +3367,7 @@ img {
   }
 
   .gallery__item {
-    width: 30.25%;
+    width: 32.33333%;
   }
 
   .types__wrapper {
