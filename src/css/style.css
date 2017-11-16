@@ -2185,6 +2185,19 @@ img {
   margin-right: 0;
 }
 
+.gallery--types .gallery__item h3 {
+  -ms-flex-item-align: center;
+      align-self: center;
+  text-align: center;
+  margin-bottom: 0;
+  padding-left: 0;
+  margin-right: 0;
+}
+
+.gallery--types .gallery__list {
+  margin-bottom: 0;
+}
+
 .gallery__wrapper {
   max-width: 1300px;
   margin: 0 auto;

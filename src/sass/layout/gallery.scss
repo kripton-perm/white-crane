@@ -18,6 +18,21 @@
       }
     }
   }
+
+  &--types {
+    .gallery__item {
+      h3 {
+        align-self: center;
+        text-align: center;
+        margin-bottom: 0;
+        padding-left: 0;
+        margin-right: 0;
+      }
+    }
+    .gallery__list {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .gallery__wrapper {
