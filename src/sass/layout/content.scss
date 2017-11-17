@@ -1,0 +1,85 @@
+.content {
+  @include wrapper;
+  @include padding(0, 2);
+  @include row-flex;
+  justify-content: center;
+  align-items: flex-start;
+  @include tablet-block{
+    justify-content: space-around;
+  };
+}
+
+.content__title {
+  @include col;
+  @include size(24);
+  margin-bottom: 0;
+}
+
+.content__date {
+  @include col;
+  @include size(24);
+  text-align: right;
+  font-size: 20px;
+  margin-right: 5%;
+  margin-bottom: 0;
+}
+
+.content__person {
+  @include col;
+  @include size(20);
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 0;
+  @include tablet-block{
+    margin-bottom: $padding;
+  };
+  
+  a {
+    text-decoration: none;
+    color: $green;
+    &:hover {
+      text-decoration: underline;
+      color: darken($green, 20%);
+    }
+  }
+}
+
+.content__picture {
+  @include col;
+  @include size(22);
+  @include size-tablet(11);
+  @include size-desktop(9);
+  @include tablet-block{
+    
+  };
+  @include desktop-block{
+    
+  };
+
+  img {
+    width: 100%;
+  }
+}
+
+.content__main {
+  @include col;
+  @include size(22);
+  @include size-tablet(12);
+  @include size-desktop(14);
+  p {
+    text-indent: 10%;
+    text-align: justify;
+    @include tablet-block{
+      text-indent: 7%;
+    };
+    @include desktop-block{
+      text-indent: 5%;
+    };
+  }
+}
+
+.content__button {
+  display: block;
+  margin: 0 auto;
+}
