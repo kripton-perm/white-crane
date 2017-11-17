@@ -1,26 +1,4 @@
 $(document).ready(() => {
-  const $navMain = $('.main-nav');
-  const $navToggle = $('.main-nav__toggle');
-  $navMain.removeClass('main-nav--nojs');
-  $navMain.removeClass('main-nav--open');
-  $navMain.addClass('main-nav--close');
-  $navToggle.on('click', () => {
-    $navMain.toggleClass('main-nav--close');
-    $navMain.toggleClass('main-nav--open');
-  });
-});
-$(document).ready(() => {
-  const $scheduleSignup = $('.schedule__signup');
-  const $scheduleModal = $('.schedule__modal');
-  const $scheduleClose = $('.schedule__modal .signup__close');
-  $scheduleSignup.on('click', () => {
-    $scheduleModal.addClass('modal--show');
-  });
-  $scheduleClose.on('click', () => {
-    $scheduleModal.removeClass('modal--show');
-  });
-});
-$(document).ready(() => {
   const $schedule = $('.schedule');
   const $scheduleButtons = $('.schedule__days-button');
   

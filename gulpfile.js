@@ -8,6 +8,7 @@ var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 var gcmq = require('gulp-group-css-media-queries');
 var sourcemaps = require('gulp-sourcemaps');
+var rigger = require('gulp-rigger');
 var config = {
     src: './src',
     css: {
@@ -15,10 +16,27 @@ var config = {
         src: '/sass/style.scss',
         dest: '/css'
     },
+    js: {
+        watch: '/js/src/*.js',
+        src: '/js/src/main.js',
+        dest: '/js'
+    },
     html: {
         src: '/*.html'
     }
 };
+
+// сбор js
+gulp.task('js', function () {
+    gulp.src(config.src + config.js.src) // получим файл main.js
+        .pipe(plumber()) // для отслеживания ошибок
+        .pipe(rigger()) // импортируем все указанные файлы в main.js
+        //.pipe(sourcemaps.init()) //инициализируем sourcemap
+        //.pipe(uglify()) // минимизируем js
+        //.pipe(sourcemaps.write('./')) //  записываем sourcemap
+        .pipe(gulp.dest(config.src + config.js.dest)) // положим готовый файл
+        .pipe(server.reload({stream: true})); // перезагрузим сервер
+});
 
 gulp.task("style", function() {
   gulp.src(config.src + config.css.src)
@@ -46,6 +64,7 @@ gulp.task("serve", ["style"], function() {
   });
 
   gulp.watch(config.src + config.css.watch, ["style"]);
+  gulp.watch(config.src + config.js.watch, ["js"]);
   //gulp.watch(config.src + config.html.src).on("change", server.reload);
   gulp.watch(config.src + config.html.src, server.reload);
 });
