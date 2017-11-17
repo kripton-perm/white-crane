@@ -12,8 +12,10 @@
     "gulp-group-css-media-queries": "^1.2.0",
     "gulp-plumber": "1.1.x",
     "gulp-postcss": "7.0.x",
+    "gulp-rigger": "^0.5.8",
     "gulp-sass": "3.1.x",
     "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
     "smart-grid": "^2.0.0",
     "stylelint": "8.1.x",
     "stylelint-config-htmlacademy": "0.1.x"
@@ -39,5 +41,8 @@
   ],
   "engines": {
     "node": "8.2"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
   }
 }
