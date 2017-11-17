@@ -1,11 +1,16 @@
 .signup {
   background-color: lighten($green, 40%);
   overflow-y: scroll;
-
-  @media (min-width: $desktop-width) {
+  overflow-y: auto;
+  min-height: 100vh;
+  @include padding(2, 1);
+  @include tablet-block{
+    @include padding(2, 2);
+  };
+  @include desktop-block{
     overflow-y: auto;
-    height: 100vh;
-  }
+    overflow: hidden;
+  };
 }
 
 .signup__wrapper {
@@ -16,8 +21,8 @@
   background-color: transparent;
   border: none;
   position: fixed;
-  top: $padding / 2;
-  right: $padding;
+  top: $padding / 4;
+  right: $padding / 2;
   color: $green;
   cursor: pointer;
 
@@ -34,20 +39,101 @@
 
 .signup__intro {
   margin: 0;
-  padding: 0;
-
-  @media (min-width: $tablet-width) {
-    text-align: center;
-  }
+  margin-bottom: $padding;
+  padding: 0 5%;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
   
   a {
     color: $green;
     text-decoration: none;
     font-weight: 700;
+    white-space: nowrap;
 
     &:hover,
     &:focus {
       color: darken($green, 20%);
     }
+  }
+}
+
+.signup__form {
+  @include row-flex;
+  justify-content: center;
+  @include tablet-block{
+    justify-content: space-around;
+  };
+  .form__fieldset {
+    @include col;
+    @include size(22);
+    &:nth-child(1) {
+      @include size-tablet(14);
+      @include size-desktop(24);
+      .form__input {
+        @include tablet-block{
+          margin-right: 7%;
+        };
+        @include desktop-block{
+          margin-right: 0;
+        };
+      }
+    }
+    &:nth-child(2) {
+      @include size-tablet(10);
+      @include size-desktop(24);
+      .form__input {
+        @include tablet-block{
+          width: 65%;
+        };
+        @include desktop-block{
+          width: 80%;
+        };
+      }
+    }
+    @include size-desktop(20);
+    margin-bottom: $padding;
+  }
+  .form__list {
+    @include desktop-block{
+      justify-content: space-between;
+    };
+  }
+  .form__item {
+    margin-bottom: $padding;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet-block{
+      flex-direction: row;
+      justify-content: space-between;
+    };
+    @include size-desktop(7);
+    @include desktop-block{
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0;
+    };
+  }
+  .form__label {
+    @include padding(0.25, 0.25);
+    @include tablet-block{
+      margin-right: 5%;
+      flex-grow: 1;
+    };
+    @include desktop-block{
+      margin-right: 0;
+    };
+  }
+  .form__input {
+    width: 60%;
+    min-width: 200px;
+    @include tablet-block{
+      min-width: 150px;
+      width: 50%;
+    };
+    @include desktop-block{
+      width: 80%;
+    };
   }
 }

@@ -9,6 +9,7 @@ var server = require("browser-sync").create();
 var gcmq = require('gulp-group-css-media-queries');
 var sourcemaps = require('gulp-sourcemaps');
 var rigger = require('gulp-rigger');
+var uglify = require('gulp-uglify');
 var config = {
     src: './src',
     css: {
@@ -32,8 +33,9 @@ gulp.task('js', function () {
         .pipe(plumber()) // для отслеживания ошибок
         .pipe(rigger()) // импортируем все указанные файлы в main.js
         //.pipe(sourcemaps.init()) //инициализируем sourcemap
-        //.pipe(uglify()) // минимизируем js
         //.pipe(sourcemaps.write('./')) //  записываем sourcemap
+        .pipe(gulp.dest(config.src + config.js.dest)) // положим готовый файл
+        .pipe(uglify()) // минимизируем js
         .pipe(gulp.dest(config.src + config.js.dest)) // положим готовый файл
         .pipe(server.reload({stream: true})); // перезагрузим сервер
 });

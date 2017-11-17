@@ -1,41 +1,7 @@
-.form {
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  @media (min-width: $tablet-width) {
-    justify-content: space-between;
-  }
-  
-}
-
 .form__fieldset {
-  width: 100%;
   border: none;
-  margin: 0;
-  margin-bottom: $padding;
   padding: 0;
-
-  @media (min-width: $tablet-width) {
-    width: 48%;
-    /*border: 2px solid green;*/
-    padding: $padding / 2;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 100%;
-  }
-
-  &--comment {
-    @media (max-width: $tablet-width-only) {
-      width: 100%;
-      border: none;
-    }
-  }
-
+  
   legend {
     display: none;
   }
@@ -43,61 +9,36 @@
 
 .form__list {
   @include list-reset;
-  width: 100%;
-
-  @media (min-width: $desktop-width) {
-    display: flex;
-    justify-content: space-between;
-  }
+  @include row-flex;
 }
 
 .form__label {
-  width: 100%;
-  padding: $padding / 2;
 }
 
 .form__item {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: $padding;
-
-  &:last-child {
-    @media (max-width: $tablet-width-only) {
-      margin-bottom: 0;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 25%;
-    margin-bottom: 0;
-  }
+  @include col;
+  @include size(24);
 }
 
 .form__input {
-  padding: 0 $padding / 2;
-  width: 100%;
   font: inherit;
   font-size: 14px;
-  line-height: 50px;
+  line-height: 40px;
+  padding: $padding / 2;
   color: $green;
-  height: 50px;
+  height: 40px;
 
   &::placeholder {
     font: inherit;
     font-size: 14px;
-    line-height: 50px;
+    line-height: 40px;
     color: $green;
   }
 }
 
 .form__comment {
-  width: 100%;
-  padding: $padding / 2;
   resize: vertical;
+  padding: $padding;
+  width: 100%;
 }
 
-.form__submit {
-  @media (min-width: $tablet-width) {
-    margin: auto;
-  }
-}

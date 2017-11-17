@@ -1,9 +1,9 @@
-$(document).ready(() => {
-  const $schedule = $('.schedule');
-  const $scheduleButtons = $('.schedule__days-button');
+$(document).ready(function() {
+  var $schedule = $('.schedule');
+  var $scheduleButtons = $('.schedule__days-button');
   
   $schedule.removeClass('schedule--nojs');
-  $scheduleButtons.on('click', event => {
+  $scheduleButtons.on('click', function(event) {
     var $scheduleButtonCurrent = $('.schedule__days-button--current');
     var $dayShow = $('.schedule__day--show');
     $scheduleButtonCurrent.removeClass('schedule__days-button--current');
