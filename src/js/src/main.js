@@ -2,6 +2,8 @@
 //= menu.js
 //= subscribe.js
 //= schedule.js
+//= slider.js
+
 
 
 

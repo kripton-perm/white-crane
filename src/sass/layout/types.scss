@@ -25,6 +25,9 @@
   @include row-flex;
   justify-content: center;
   margin-bottom: $padding;
+  @media (max-width: $mobile-width-only) {
+    height: 90vh;
+  }
 
   @media (min-width: $tablet-width) {
     justify-content: space-between;
@@ -42,15 +45,12 @@
   @include size-desktop(7.5);
   display: flex;
   flex-direction: column;
+  @media (max-width: $mobile-width-only) {
+    height: 90vh;
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: $padding;
-  }
-
-  &:nth-child(n+2) {
-    @media (max-width: $mobile-width-only) {
-      display: none;
-    }
   }
 }
 
@@ -69,6 +69,13 @@
       opacity: 1;
     }
   }
+}
+
+.types__details {
+  align-self: center;
+  margin-top: auto;
+
+  @include tablet(display, none);
 }
 
 .types__name {

@@ -1140,40 +1140,39 @@ img {
   position: relative;
 }
 
+/*
 .slider__toggle {
   display: inline-block;
   margin: 0;
-  margin-right: 20px;
+  margin-right: $padding;
   padding: 0;
   width: 50px;
   height: 50px;
-  border: 10px solid #ffffff;
+  border: 10px solid $white;
   background-color: yellow;
   border-radius: 50%;
   cursor: pointer;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
   transition: all 0.5s;
   outline: none;
-}
 
-.slider__toggle:last-child {
-  margin-right: 0;
-}
+  &:last-child {
+    margin-right: 0;
+  }
 
-.slider__toggle:hover,
-.slider__toggle:focus {
-  background-color: #ffffff;
-  border-color: yellow;
-}
+  &:hover,
+  &:focus {
+    background-color: $white;
+    border-color: yellow;
+  }
 
-.slider__toggle--active,
-.slider__toggle--active:hover,
-.slider__toggle--active:focus {
-  background-color: #ffffff;
-  border-color: green;
-  cursor: default;
-}
+  &--active,
+  &--active:hover ,
+  &--active:focus {
+    background-color: $white;
+    border-color: green;
+    cursor: default;
+  }
+}*/
 
 .breadcrumbs {
   list-style: none;
@@ -2124,6 +2123,11 @@ img {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 30px;
+  /*&:nth-child(n + 2) {
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }*/
 }
 
 .news__item:last-child {
@@ -2166,7 +2170,7 @@ img {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
-  width: 80%;
+  width: 90%;
   margin-bottom: 10px;
 }
 
@@ -2186,6 +2190,7 @@ img {
 }
 
 .news__link {
+  position: relative;
   padding: 10px;
   border: 2px solid #4c9d46;
   -webkit-transition: all 0.5s;
@@ -2453,6 +2458,12 @@ img {
   opacity: 1;
 }
 
+.types__details {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: auto;
+}
+
 .types__name {
   -ms-flex-item-align: center;
       align-self: center;
@@ -2556,6 +2567,7 @@ img {
 .coaches__item {
   background-color: #a9d7a5;
   border-radius: 20px;
+  margin-bottom: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
   -webkit-box-sizing: border-box;
@@ -2598,6 +2610,12 @@ img {
 .coaches__link:focus .coaches__image,
 .coaches__link:active .coaches__image {
   opacity: 1;
+}
+
+.coaches__details {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: auto;
 }
 
 .coaches__name {
@@ -3025,6 +3043,10 @@ img {
     width: 46.91667%;
   }
 
+  .types__details {
+    display: none;
+  }
+
   .coaches__wrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -3032,6 +3054,10 @@ img {
 
   .coaches__item {
     width: 46.91667%;
+  }
+
+  .coaches__details {
+    display: none;
   }
 
   .page-footer__wrapper {
@@ -3163,6 +3189,10 @@ img {
 
   .contacts__title {
     margin-bottom: 20px;
+  }
+
+  .slider__toggle {
+    display: none;
   }
 
   .breadcrumbs__item {
@@ -3950,13 +3980,41 @@ img {
     display: none;
   }
 
-  .slider__item {
-    position: absolute;
-    opacity: 0;
+  .slider__list {
+    position: relative;
+    width: 100%;
   }
 
-  .slider__item--active {
+  .slider__item {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+    z-index: 1;
+  }
+
+  .slider__item--current {
     opacity: 1;
+    z-index: 2;
+  }
+
+  .slider__toggle {
+    position: absolute;
+    top: 40%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .slider__toggle--prev {
+    left: 0;
+  }
+
+  .slider__toggle--next {
+    right: 0;
   }
 
   .main-nav--open .main-nav__toggle-image--open {
@@ -3989,14 +4047,24 @@ img {
     position: relative;
   }
 
-  .news__item:nth-child(n + 2) {
-    display: none;
+  .news__list {
+    height: 80vh;
+  }
+
+  .news__item {
+    height: 80vh;
+  }
+
+  .news__relation {
+    min-width: 250px;
+    max-width: 300px;
   }
 
   .news__all {
     position: absolute;
-    right: 10%;
-    bottom: 90px;
+    z-index: 2;
+    right: 8%;
+    bottom: 60px;
     border-width: 2px;
     padding: 10px;
     font-size: 14px;
@@ -4013,12 +4081,27 @@ img {
     margin-bottom: 0;
   }
 
-  .types__item:nth-child(n+2) {
-    display: none;
+  .types__list {
+    height: 90vh;
   }
 
-  .coaches__item:nth-child(n+2) {
-    display: none;
+  .types__item {
+    height: 90vh;
+  }
+
+  .coaches__list {
+    height: 95vh;
+  }
+
+  .coaches__item {
+    height: 95vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 

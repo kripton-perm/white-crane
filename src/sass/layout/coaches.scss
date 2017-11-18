@@ -24,6 +24,9 @@
   @include row-flex;
   justify-content: center;
   margin-bottom: $padding;
+  @media (max-width: $mobile-width-only) {
+    height: 95vh;
+  }
 
   @media (min-width: $tablet-width) {
     justify-content: space-between;
@@ -34,6 +37,12 @@
 .coaches__item {
   background-color: lighten($green, 30%);
   border-radius: $padding;
+  margin-bottom: $padding;
+  @media (max-width: $mobile-width-only) {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+  }
   @include padding(1, 1);
   @include col;
   @include size(22);
@@ -42,11 +51,6 @@
   @include desktop-block{
     display: flex;
   };
-  &:nth-child(n+2) {
-    @media (max-width: $mobile-width-only) {
-      display: none;
-    }
-  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 2 * $padding;
@@ -95,6 +99,13 @@
       opacity: 1;
     }
   }
+}
+
+.coaches__details {
+  align-self: center;
+  margin-top: auto;
+
+  @include tablet(display, none);
 }
 
 .coaches__name {
