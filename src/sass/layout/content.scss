@@ -1,7 +1,8 @@
-.content {
+.content__wrapper {
   @include wrapper;
   @include padding(0, 2);
-  @include row-flex;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   @include tablet-block{
@@ -10,27 +11,29 @@
 }
 
 .content__title {
-  @include col;
-  @include size(24);
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
+  margin-bottom: $padding / 2;
 }
 
 .content__date {
-  @include col;
-  @include size(24);
+  margin: 0;
+  padding: 0;
+  width: 100%;
   text-align: right;
   font-size: 20px;
   margin-right: 5%;
-  margin-bottom: 0;
+  margin-bottom: $padding / 2;
 }
 
 .content__person {
-  @include col;
-  @include size(20);
+  margin: 0;
+  padding: 0;
+  width: 85%;
   text-align: center;
   font-size: 18px;
   line-height: 24px;
-  margin-bottom: 0;
+  margin-bottom: $padding / 2;
   @include tablet-block{
     margin-bottom: $padding;
   };
@@ -45,16 +48,25 @@
   }
 }
 
+.content__intro {
+  margin: 0;
+  margin-bottom: $padding / 2;
+  padding: 0;
+  width: 90%;
+  text-indent: 5%;
+  text-align: justify;
+}
+
 .content__picture {
-  @include col;
-  @include size(22);
-  @include size-tablet(11);
-  @include size-desktop(9);
+  margin: 0;
+  padding: 0;
+  margin-bottom: $padding / 2;
+  width: 90%;
   @include tablet-block{
-    
+    width: 45%;
   };
   @include desktop-block{
-    
+    width: 37.5%;
   };
 
   img {
@@ -63,13 +75,20 @@
 }
 
 .content__main {
-  @include col;
-  @include size(22);
-  @include size-tablet(12);
-  @include size-desktop(14);
+  width: 95%;
+  @include tablet-block{
+    width: 50%;
+  };
+  @include desktop-block{
+    width: 57%;
+  };
+  margin-bottom: $padding;
   p {
+    margin: 0;
+    padding: 0;
     text-indent: 10%;
     text-align: justify;
+    margin-bottom: $padding / 4;
     @include tablet-block{
       text-indent: 7%;
     };
@@ -77,6 +96,7 @@
       text-indent: 5%;
     };
   }
+  
 }
 
 .content__button {
