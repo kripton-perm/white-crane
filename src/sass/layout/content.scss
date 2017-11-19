@@ -48,6 +48,28 @@
   }
 }
 
+.content__type {
+  margin: 0;
+  padding: 0;
+  width: 85%;
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: $padding / 2;
+  @include tablet-block{
+    margin-bottom: $padding;
+  };
+  
+  a {
+    text-decoration: none;
+    color: $green;
+    &:hover {
+      text-decoration: underline;
+      color: darken($green, 20%);
+    }
+  }
+}
+
 .content__intro {
   margin: 0;
   margin-bottom: $padding / 2;
