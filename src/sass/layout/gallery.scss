@@ -33,6 +33,33 @@
       margin-bottom: 0;
     }
   }
+  
+  &--reviews {
+    h3 {
+      a {
+        text-decoration: none;
+        color: $green;
+        
+        &:hover,
+        &:focus,
+        &:active {
+          color: darken($green, 15%);
+        }
+      }
+    }
+    .gallery__type {
+      margin: 0;
+      padding: 0;
+      text-align: right;
+      padding-right: $padding;
+    }
+    .relation__offset {
+      padding-top: 100%;
+    }
+    .gallery__image {
+      border-radius: 50%;
+    }
+  }
 }
 
 .gallery__wrapper {
@@ -116,6 +143,8 @@
   padding: 0;
   padding: $padding;
   font-size: 16px;
+  text-align: justify;
+  text-indent: 5%;
   @include tablet(font-size, 18px);
 }
 

@@ -2243,6 +2243,32 @@ img {
   margin-bottom: 0;
 }
 
+.gallery--reviews h3 a {
+  text-decoration: none;
+  color: #4c9d46;
+}
+
+.gallery--reviews h3 a:hover,
+.gallery--reviews h3 a:focus,
+.gallery--reviews h3 a:active {
+  color: #32682e;
+}
+
+.gallery--reviews .gallery__type {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.gallery--reviews .relation__offset {
+  padding-top: 100%;
+}
+
+.gallery--reviews .gallery__image {
+  border-radius: 50%;
+}
+
 .gallery__wrapper {
   max-width: 1300px;
   margin: 0 auto;
@@ -2338,6 +2364,8 @@ img {
   padding: 0;
   padding: 20px;
   font-size: 16px;
+  text-align: justify;
+  text-indent: 5%;
 }
 
 .gallery__relation {
