@@ -24,15 +24,14 @@
   font: inherit;
   font-size: 14px;
   line-height: 40px;
-  padding: $padding / 2;
+  padding: 0 ($padding / 2);
   color: $green;
-  height: 40px;
+  //height: 40px;
 
   &::placeholder {
-    font: inherit;
     font-size: 14px;
-    line-height: 40px;
     color: $green;
+    font-weight: 700;
   }
 }
 

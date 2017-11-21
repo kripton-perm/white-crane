@@ -588,6 +588,10 @@ img {
   text-align: center;
 }
 
+.z0 {
+  z-index: 0;
+}
+
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -755,37 +759,32 @@ img {
   font: inherit;
   font-size: 14px;
   line-height: 40px;
-  padding: 10px;
+  padding: 0 10px;
   color: #4c9d46;
-  height: 40px;
 }
 
 .form__input::-webkit-input-placeholder {
-  font: inherit;
   font-size: 14px;
-  line-height: 40px;
   color: #4c9d46;
+  font-weight: 700;
 }
 
 .form__input:-ms-input-placeholder {
-  font: inherit;
   font-size: 14px;
-  line-height: 40px;
   color: #4c9d46;
+  font-weight: 700;
 }
 
 .form__input::-ms-input-placeholder {
-  font: inherit;
   font-size: 14px;
-  line-height: 40px;
   color: #4c9d46;
+  font-weight: 700;
 }
 
 .form__input::placeholder {
-  font: inherit;
   font-size: 14px;
-  line-height: 40px;
   color: #4c9d46;
+  font-weight: 700;
 }
 
 .form__comment {
