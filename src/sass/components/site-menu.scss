@@ -1,6 +1,6 @@
 .site-menu {
-  @include wrapper;
   @include list-reset;
+  @include wrapper;
 
   @media (max-width: $mobile-width-only) {
     display: flex;
@@ -50,6 +50,7 @@
   color: $green;
   text-decoration: none;
   font-size: 18px;
+  font-weight: 700;
   line-height: 24px;
   padding: ($padding / 2) 0;
   text-align: center;
@@ -67,12 +68,12 @@
 
   @media (min-width: $tablet-width) {
     color: black;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   @media (min-width: $desktop-width) {
     padding: $padding / 2;
-    font-size: 15px;
+    font-size: 14px;
   }
 
   &--current {

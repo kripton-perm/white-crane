@@ -3,10 +3,9 @@
   border-radius: $padding;
   padding: $padding;
   margin: 0 auto;
-
-  @media (min-width: $desktop-width) {
-    //margin: 0;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .recall__title {
@@ -32,42 +31,28 @@
     font-style: 18px;
     line-height: 24px;
   }
-  
 }
 
 .recall__form {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 
   p {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     margin-bottom: $padding;
-  }
-
-  .form__label {
-    margin: 0;
-    flex-grow: 0;
-    width: auto;
   }
 
   .form__input {
-    flex-grow: 1;
+    max-width: 150px;
     margin: 0;
-    border: 1px solid $green;
-    border-radius: $padding / 4;
-    margin-right: $padding;
+    border: 2px solid $green;
+    border-radius: $padding / 2;
   }
 
   .form__submit {
-    margin: auto;
-    margin-bottom: $padding;
-
     @media (min-width: $desktop-width) {
       font-size: 20px;
     }
