@@ -1,4 +1,5 @@
 .greeting {
+  height: 100vh;
   margin-top: $padding;
   background-color: #222222;
   background-image: url('../img/bg-greeting-mobile.jpg');
@@ -17,6 +18,7 @@
 }
 
 .greeting__wrapper {
+  height: 100%;
   @include wrapper;
   @include padding(2, 1);
   background-color: rgba(0, 0, 0, 0.2);
@@ -25,12 +27,13 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
+  justify-content: space-around;
   @include tablet-block {
-    @include padding(3, 2);
+    //@include padding(3, 2);
     align-items: flex-start;
   };
   @include desktop-block {
-    @include padding(8, 3);
+    //@include padding(8, 3);
     background-color: transparent;
   };
 }
@@ -56,10 +59,8 @@
     margin-bottom: 5 * $padding;
     font-size: 36px;
     line-height: 54px;
-  }
-
-  span {
-    white-space: nowrap;
+    position: relative;
+    top: 2 * $padding;
   }
 }
 
@@ -80,10 +81,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 0.6 * $desktop-width;
+    width: 0.65 * $desktop-width;
     font-size: 25px;
     line-height: 30px;
-    margin-bottom: 2 * $padding;
+    //margin-bottom: 2 * $padding;
   }
 }
 
@@ -103,7 +104,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 0.5 * $desktop-width;
+    width: 0.65 * $desktop-width;
     font-size: 25px;
     line-height: 30px;
   }
@@ -121,8 +122,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 0.5 * $desktop-width;
-    margin-bottom: 2 * $padding;
+    width: 0.65 * $desktop-width;
+    //margin-bottom: 2 * $padding;
   }
 }
 
@@ -152,5 +153,10 @@
   @include tablet-block{
     margin-left: $padding;
     margin-right: 0;
+  };
+  @include desktop-block{
+    align-self: center;
+    position: relative;
+    bottom: 2 * $padding;
   };
 }
