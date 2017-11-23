@@ -3,6 +3,10 @@
   border-top-left-radius: $padding;
   border-top-right-radius: $padding;
   @include padding(1, 0);
+  @include tablet-block{
+    @include padding(3.5, 1);
+  };
+  
   @include desktop-block {
     @include padding(2, 2);
     border-top-left-radius: 2 * $padding;
