@@ -4,7 +4,6 @@
 
 .coaches__wrapper {
   @include wrapper;
-  /*outline: 1px solid red;*/
   display: flex;
   flex-direction: column;
 }
@@ -38,19 +37,16 @@
   background-color: lighten($green, 30%);
   border-radius: $padding;
   margin-bottom: $padding;
+  display: flex;
+  flex-direction: column;
   @media (max-width: $mobile-width-only) {
     height: 95vh;
-    display: flex;
-    flex-direction: column;
   }
   @include padding(1, 1);
   @include col;
   @include size(22);
   @include size-tablet(11.5);
-  @include size-desktop(5.5);
-  @include desktop-block{
-    display: flex;
-  };
+  @include size-desktop(7.5);
 
   @media (min-width: $tablet-width) {
     margin-bottom: 2 * $padding;
@@ -62,18 +58,9 @@
     }
   }
 
-  &:nth-child(2n) {
-    .coaches__relation {
-      @include desktop-block{
-        order: 0;
-        margin-bottom: 0;
-        margin-top: auto;
-      };
-    }
-    .coaches__name {
-      @include desktop-block{
-        margin-top: 0;
-      };
+  &:nth-child(n + 3) {
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+      display: none;
     }
   }
 }
@@ -85,6 +72,7 @@
   justify-content: center;
   text-decoration: none;
   color: black;
+  flex-grow: 1;
 
   &:hover,
   &:focus,
@@ -111,6 +99,7 @@
 .coaches__name {
   margin: 0;
   margin-top: auto;
+  flex-grow: 1;
   padding: 0;
   text-align: center;
   padding-left: 5%;
@@ -127,6 +116,7 @@
 .coaches__relation {
   order: -1;
   width: 75%;
+  max-width: 350px;
   align-self: center;
   margin-bottom: $padding;
 
