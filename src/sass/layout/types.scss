@@ -52,6 +52,12 @@
   @media (min-width: $tablet-width) {
     margin-bottom: $padding;
   }
+
+  &:nth-child(n + 3) {
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+      display: none;
+    }
+  }
 }
 
 .types__link {
@@ -101,6 +107,7 @@
 .types__relation {
   order: -1;
   width: 80%;
+  max-width: 400px;
   align-self: center;
   margin-bottom: $padding / 2;
 }
