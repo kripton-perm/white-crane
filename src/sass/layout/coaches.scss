@@ -23,9 +23,6 @@
   @include row-flex;
   justify-content: center;
   margin-bottom: $padding;
-  @media (max-width: $mobile-width-only) {
-    height: 95vh;
-  }
 
   @media (min-width: $tablet-width) {
     justify-content: space-between;
@@ -36,12 +33,8 @@
 .coaches__item {
   background-color: lighten($green, 30%);
   border-radius: $padding;
-  margin-bottom: $padding;
   display: flex;
   flex-direction: column;
-  @media (max-width: $mobile-width-only) {
-    height: 95vh;
-  }
   @include padding(1, 1);
   @include col;
   @include size(22);
@@ -104,6 +97,9 @@
   text-align: center;
   padding-left: 5%;
   padding-right: 5%;
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: $padding;
+  }
 }
 
 .coaches__type {

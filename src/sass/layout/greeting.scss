@@ -18,19 +18,19 @@
 }
 
 .greeting__wrapper {
-  height: 100%;
+  height: 100vh;
   @include wrapper;
-  @include padding(2, 1);
+  @include padding(1, 1);
   background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-end;
   justify-content: space-around;
   @include tablet-block {
     align-items: flex-start;
   };
   @include desktop-block {
+    @include padding(3, 1);
     background-color: transparent;
   };
 }
@@ -38,22 +38,21 @@
 .greeting__title {
   width: $mobile-width;
   margin: 0;
-  margin-bottom: $padding / 2;
-  padding: 0;
-  padding: $padding;
+  padding: 0 5%;
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 30px;
+  align-self: center;
 
   @media (min-width: $tablet-width) {
-    width: 0.6 * $tablet-width;
+    width: 0.8 * $tablet-width;
     font-size: 30px;
     line-height: 42px;
   }
 
   @media (min-width: $desktop-width) {
     width: 0.6 * $desktop-width;
-    margin-bottom: 5 * $padding;
+    margin-bottom: 7 * $padding;
     font-size: 36px;
     line-height: 54px;
     position: relative;
@@ -63,22 +62,21 @@
 
 .greeting__text {
   width: $mobile-width;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 20px;
   text-align: justify;
   margin: 0;
-  margin-bottom: $padding / 2;
-  padding: 0;
-  padding: $padding;
+  padding: 0 $padding;
 
   @media (min-width: $tablet-width) {
-    width: 0.6 * $tablet-width;
-    font-size: 16px;
+    width: 0.7 * $tablet-width;
+    font-size: 18px;
     line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
     width: 0.65 * $desktop-width;
+    margin-bottom: 5vh;
     font-size: 25px;
     line-height: 30px;
   }
@@ -86,16 +84,17 @@
 
 .greeting__list-intro {
   width: $mobile-width;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 20px;
   margin: 0;
   padding: 0;
   padding-left: $padding;
   padding-right: $padding;
+  margin-bottom: $padding / 2;
 
   @media (min-width: $tablet-width) {
     width: 0.6 * $tablet-width;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
   }
 
@@ -111,10 +110,10 @@
   width: $mobile-width;
   padding-left: $padding;
   padding-right: $padding;
-  margin-bottom: $padding;
 
   @media (min-width: $tablet-width) {
-    width: 0.6 * $tablet-width;
+    width: 0.7 * $tablet-width;
+    margin-bottom: $padding;
   }
 
   @media (min-width: $desktop-width) {
@@ -124,8 +123,8 @@
 
 .greeting__item {
   text-transform: lowercase;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 20px;
   font-weight: 700;
 
   &::before {
@@ -133,7 +132,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 27px;
   }
 
