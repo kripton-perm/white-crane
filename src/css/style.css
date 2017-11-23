@@ -491,29 +491,6 @@ template {
   display: none;
 }
 
-/*
-@mixin wrapper {
-  width: 100%;
-  min-width: $mobile-width;
-  padding-left: $padding / $mobile-width * 100%;
-  padding-right: $padding / $mobile-width * 100%;
-  padding-top: 2 * $padding;
-  padding-bottom: 2 * $padding;
-
-  @media (min-width: $tablet-width) {
-    padding-left: $padding / $tablet-width * 100%;
-    padding-right: $padding / $tablet-width * 100%;
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 1200px;
-    padding-left: $padding / $desktop-width * 100%;
-    padding-right: $padding / $desktop-width * 100%;
-    margin: 0 auto;
-  }
-}
-*/
-
 .debug {
   height: 100vh;
   position: fixed;
@@ -2331,7 +2308,7 @@ img {
 
 .types {
   background-color: rgba(76, 157, 70, 0.3);
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 20px;
 }
 
@@ -2353,7 +2330,7 @@ img {
 .types__title {
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .types__list {
@@ -2502,7 +2479,7 @@ img {
 .coaches__title {
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .coaches__list {

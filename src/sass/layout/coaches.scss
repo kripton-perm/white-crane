@@ -11,7 +11,7 @@
 .coaches__title {
   margin: 0;
   padding: 0;
-  margin-bottom: $padding;
+  margin-bottom: 2 * $padding;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 2 * $padding;

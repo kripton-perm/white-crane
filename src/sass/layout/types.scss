@@ -1,6 +1,6 @@
 .types {
   background-color: rgba($green, 0.3);
-  @include padding(1, 1);
+  @include padding(2, 1);
 }
 
 .types__wrapper {
@@ -13,7 +13,7 @@
 .types__title {
   margin: 0;
   padding: 0;
-  margin-bottom: $padding;
+  margin-bottom: 2 * $padding;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 2 * $padding;
