@@ -3020,6 +3020,11 @@ img {
     display: none;
   }
 
+  .page-footer {
+    padding-top: 70px;
+    padding-bottom: 20px;
+  }
+
   .page-footer__wrapper {
     padding-left: 20px;
     padding-right: 20px;
@@ -3355,11 +3360,6 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-bottom: 0;
-  }
-
-  .coaches__item {
-    margin-bottom: 40px;
   }
 }
 
